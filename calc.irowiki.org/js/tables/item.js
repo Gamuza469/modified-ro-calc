@@ -1546,6 +1546,7 @@
 ,[1543,itm_type_SET,0,0,0,0,0,0,bon_DMG_SKILL+492,200,bon_DMG_ELE_UNDEAD,30,bon_NONE] // Robe of Judgement + Shoes of Judgement + Shawl of Judgement + Empowered Mace of Judgement
 ,[1544,itm_type_GARMENT,0,18,0,1,20,1,bon_NONE] // Archangel Wing
 ,[1545,itm_type_GARMENT,0,18,0,1,20,1,bon_MDEF,18,bon_LUK,2,bon_NONE] // Fallen Angel Wing
+,[1546,itm_type_SHOES,0,13,0,1,50,85,bon_HP_MUL,12,bon_SP_MUL,12,bon_NONE] // Enhanced Variant Shoes
 ];
 ItemMax = ItemOBJ.length -1;
 }

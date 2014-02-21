@@ -2046,6 +2046,10 @@ function calcHardDef( n_A_totalDEF )
 	if ( EquipNumSearch( 1351 ) && n_A_HEAD_DEF_PLUS >= 7 )
 	{ // Leo Crown
 		n_A_DEF += 1;
+	}i
+	if(EquipNumSearch(1546))
+	{ // Enhanced Variant Shoes
+		n_A_DEF += Math.floor(n_A_SHOES_DEF_PLUS /2);
 	}
 
 	// Skills
@@ -2193,7 +2197,7 @@ function calcSoftDef( n_A_VITDEF )
 		n_A_VITDEF = 0;
 	if ( acolyteBuffs[ksAssumptio] )
 	{ // Assumptio
-		n_A_VITDEF *= 2;
+		n_A_VITDEF *= 1;
 	}
 		
 	return n_A_VITDEF;
@@ -2337,7 +2341,7 @@ function calcSoftMDef( n_A_INTMDEF )
 	}
 	if ( acolyteBuffs[ksAssumptio] )
 	{ // Assumptio
-		n_A_INTMDEF *= 2;
+		n_A_INTMDEF *= 1;
 	}
 
 	return n_A_INTMDEF;
@@ -4123,11 +4127,6 @@ function calcIncomingDamage()
 	for(i=0;i<=6;i++)
 		w_HiDam[i] -= Math.floor(w_HiDam[i] * wBHD /100);
 
-	if(SkillSearch(skill_MO_STEEL_BODY))
-	{
-		for(i=0;i<=6;i++)
-			w_HiDam[i] = Math.floor(w_HiDam[i] * 10 /100);
-	}
 	// player defense
 	if (enemySkills[n_A_MobSkill][1] % 2 == 0)
 	{
@@ -4140,6 +4139,12 @@ function calcIncomingDamage()
 				w_HiDam[i] = w_HiDam[i] - n_A_INTDEF;
 			else w_HiDam[i] = w_HiDam[i] - n_A_VITDEF;
 		}
+	}
+	
+	if(SkillSearch(skill_MO_STEEL_BODY))
+	{
+		for(i=0;i<=6;i++)
+			w_HiDam[i] = Math.floor(w_HiDam[i] * 10 /100);
 	}
 	
 	for(i=0;i<=6;i++)

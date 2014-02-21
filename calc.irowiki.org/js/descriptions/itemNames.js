@@ -1546,5 +1546,6 @@ ITEM_NAME = [
 ,[1543,0,0,"Robe of Judgement + Shoes of Judgement + Shawl of Judgement + Mace of Judgement","Increases SP cost of [Adoramus] by 30.",0]
 ,[1544,0,0,"Archangel Wing","",0]
 ,[1545,0,0,"Fallen Angel Wing","Reduces magical damage received from [Demi-Human] race by 10%.",0]
+,[1546,0,0,"Enhanced Variant Shoes","Each 2 upgrades increases [DEF] by 1.",0]
 ]
 };

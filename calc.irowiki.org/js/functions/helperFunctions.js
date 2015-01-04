@@ -222,10 +222,12 @@ function StCalc(nSC)
 			{
 				wStPoint += Math.floor(i / 5) + 3;
 			}
-			else
-			{
-				wStPoint += Math.floor((i-100) / 10) + 23;
-			}
+			else if (i <= 159 || i == 161 || i == 170)
+                        {
+                                wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
+                        } else {
+                                wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+                        }
 		}
 	}
 	else
@@ -246,10 +248,12 @@ function StCalc(nSC)
 				{
 					wStPoint += Math.floor( i / 5 ) + 3;
 				}
-				else
+				else if (i <= 159 || i == 161 || i == 170)
 				{
 					wStPoint += Math.floor( ( i - 100 ) / 10 ) + 23;
-				}
+				} else {
+                                	wStPoint += Math.floor( ( i - 100 ) / 10 ) + 24;
+                                }
 			}
 		}
 	}
@@ -264,7 +268,7 @@ function StCalc2(nSC2)
 	if(nSC2<=100)
 		return Math.floor((nSC2 - 2) /10) + 2;
 	if(nSC2<=CONST_MAXSTAT_THIRD)
-		return Math.floor((nSC2-101)/5) * 4 + 16 - (nSC2==CONST_MAXSTAT_THIRD)*3;
+		return Math.floor((nSC2-101)/5) * 4 + 16;
 	return 0;
 }
 

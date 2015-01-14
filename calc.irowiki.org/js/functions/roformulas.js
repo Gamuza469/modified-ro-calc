@@ -1364,14 +1364,23 @@ function calcHP()
 							  3790,3870,3950,4030,4110,4190,4270,4350,4330,4510); // 99 is correct
 			n_A_MaxHP = GunHP[n_A_BaseLV-1];
 		}
-		
-		if ( ( n_A_JOB === cls_SNOVI || n_A_JOB === cls_ENOVI ) && n_A_BaseLV >= 99 )
-		{
-			n_A_MaxHP += 2000;
-		}
+                
+                if (n_A_JOB === cls_ENOVI && n_A_BaseLV >= 150) {
+                    n_A_MaxHP += 2000;
+                }
+                
+                if (n_A_JOB === cls_KAGOB) {
+                    n_A_MaxHP = 4250 + (55 * (n_A_BaseLV - 99));
+                }
 	}
 	else
 	{
+//            if (n_A_JOB === cls_RUN || n_A_JOB === cls_RUNt) {
+//                var base99HP = 8100;
+//                var added100HP = 33;
+//                
+//                
+//            }
 		var k = 0;
 		for (var j = 2; j <= n_A_BaseLV; j++)
 			k += (HP_COEFF[Math.floor( n_A_JOB / 2 ) - 23][0]*j + 50)/100.0;
@@ -1390,9 +1399,14 @@ function calcHP()
 	{
 		n_A_MaxHP = Math.floor( n_A_MaxHP * 70 / 100 );
 	}
-		
+	
 	// Vit ---
 	n_A_MaxHP = Math.floor((n_A_MaxHP - wHPSL) * (100 + n_A_VIT) / 100);
+        
+        if ( ( n_A_JOB === cls_SNOVI || n_A_JOB === cls_ENOVI ) && n_A_BaseLV >= 99 )
+        {
+                n_A_MaxHP += 2000;
+        }
 
 	// Additions ---
 	var additiveHP = 0;

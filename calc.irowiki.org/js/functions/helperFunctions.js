@@ -211,7 +211,11 @@ function StCalc(nSC)
 	}
 	else
 	{
-		wMAXLV = CONST_MAXLVL;
+                if (n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI) {
+                        wMAXLV = CONST_MAXLVL_KAGOB_ENOVI;
+                } else {
+                        wMAXLV = CONST_MAXLVL;
+                }
 	}
 		
 	if ( nSC == 1 || formElements["BLVauto"].checked == 0 )
@@ -289,7 +293,7 @@ function n_A_JobSet()
 		rebirthClass = 1;
 	}
 	
-	if ( n_A_JOB >= cls_RUN && n_A_JOB <= cls_ENOVI )
+	if ( n_A_JOB >= cls_RUN && n_A_JOB <= cls_GENt )
 	{ // 3rd Cls
 		thirdClass = 1;
 	}
@@ -522,7 +526,7 @@ function AdjustJobLevelList( job )
 	{
 		maxJobLvl = 10;
 	}
-	else if ( job <= cls_ALC || job == cls_KAGOB || ( cls_HSWO <= job && job <= cls_SL ) || ( cls_RUN <= job && job <= cls_ENOVI ) ) // 1st~3rd
+	else if ( job <= cls_ALC || job == cls_KAGOB || ( cls_HSWO <= job && job <= cls_SL ) || job == cls_ENOVI ) // 1st~3rd
 	{
 		maxJobLvl = 50;
 	}
@@ -530,6 +534,10 @@ function AdjustJobLevelList( job )
 	{
 		maxJobLvl = 99;
 	}
+        else if ( cls_RUN <= job && job <= cls_GENt )
+        {
+		maxJobLvl = 60;
+        }    
 	else
 	{
 		maxJobLvl = 70; // 2nd Adv
@@ -569,11 +577,15 @@ function AdjustBaseLevelList( job )
 	
 	if ( thirdClass === 1 ) // 3rdCls
 	{
-		maxBaseLvl=CONST_MAXLVL_THIRD-CONST_MAXLVL; // amount of BLvl [99, 160]
+		maxBaseLvl=CONST_MAXLVL_THIRD-CONST_MAXLVL; // amount of BLvl [99, 175]
 	}
 	else
 	{
-		maxBaseLvl=CONST_MAXLVL; // amount of BLvl [1, 99]
+                if (job == cls_KAGOB || job == cls_ENOVI) {
+                    maxBaseLvl=CONST_MAXLVL_KAGOB_ENOVI-CONST_MAXLVL; // amount of BLvl [99, 160]
+                } else {
+                    maxBaseLvl=CONST_MAXLVL; // amount of BLvl [1, 99]
+                }
 	}
 	
 	// Adjust Max Base Level List
@@ -621,7 +633,11 @@ function AdjustStatLists( job )
 	}
 	else
 	{
-		maxStatLvl = CONST_MAXSTAT; // maxStats
+                if (job == cls_KAGOB || job == cls_ENOVI) {
+                    maxStatLvl = CONST_MAXSTAT_KAGOB_ENOVI;
+                } else {
+                    maxStatLvl = CONST_MAXSTAT; // maxStats
+                }
 	}
 	
 	// Adjust Max Stat Level Lists

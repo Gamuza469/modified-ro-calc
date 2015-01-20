@@ -202,6 +202,7 @@ function StCalc(nSC)
 	else
 	{ // non trans
 		wStPoint = 48;
+	    
 	}
 	
 	var wMAXLV;
@@ -238,10 +239,14 @@ function StCalc(nSC)
 	{ // auto base level
 		if ( thirdClass == 0 )
 		{
+		    if (n_A_JOB == cls_KAGOB || n_A_JOB == cls_ENOVI) {
+			wStPoint += 1225;
+		    } else {
 			for ( var i = 1; StPoint > wStPoint && i < wMAXLV; i++ )
 			{
 				wStPoint += Math.floor( i / 5 ) + 3;
 			}
+		    }
 		}
 		else
 		{
@@ -607,11 +612,24 @@ function AdjustBaseLevelList( job )
 	}
 	else if ( len < maxBaseLvl )
 	{
-		// (-> 2nd)
-		for ( var i = 0; i !== maxBaseLvl; i++ )
-		{
-			// add & refresh options
-			formElements["A_BaseLV"].options[i] = new Option( i + 1, i + 1 );
+		if ( thirdClass === 1 ) {
+		    for ( var i = maxBaseLvl; i !== len; i-- )
+		    {
+			    // delete options
+			    formElements["A_BaseLV"].options[i - 1] = null;
+		    }
+		    for ( var i = 0; i !== ( maxBaseLvl + 1 ); i++ )
+		    {
+			    // refresh labels
+			    formElements["A_BaseLV"].options[i] = new Option( i + 99, i + 99 );
+		    }
+		} else {
+		    // (-> 2nd)
+		    for ( var i = 0; i !== maxBaseLvl; i++ )
+		    {
+			    // add & refresh options
+			    formElements["A_BaseLV"].options[i] = new Option( i + 1, i + 1 );
+		    }
 		}
 	}
 }

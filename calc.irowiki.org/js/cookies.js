@@ -586,6 +586,9 @@ function LoadCookie()
 		formElements["A_SHOES_DEF_PLUS"].value = 0;
 	}
 
+	
+	StCalc(1);
+
 	calc();
 }
 

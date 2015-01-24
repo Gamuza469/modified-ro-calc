@@ -732,5 +732,18 @@ SKILL_NAME = [
 ,["Throw Explosive Kunai","Throw Explosive Kunai"]
 ,["Summon Elemental Seal","Summon Elemental Seal"]
 ,["Seals Element","Seals element"]
+,["","Dragon's Water Breath"]
+,["","Dark Claw"]
+,["","Offertorium"]
+,["a","a"]
+,["a","a"]
+,["a","a"]
+,["a","a"]
+,["a","a"]
+,["a","a"]
+,["a","a"]
+,["a","a"]
+,["a","a"]
+,["","Full Throttle"]
 ];
 }

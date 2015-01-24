@@ -95,6 +95,16 @@
 	            <table class="bgLtTable aligned">
 	            	<tbody><tr>
 	            		<td class="bgLtRow3 padded optCaption">
+					01/24/2014:
+					<ul style="margin-left: 5px">
+					    <li>Tweaked 3rd jobs HP values some more. They should be accurate up to Lv.150.</li>
+					    <li>Same goes for SP values. However, these should be accurate up to Lv.175.</li>
+					    <li>Fixed SP values for Kagerou/Oboro.</li>
+					    <li>The 'Adopted' checkbox will only be available on jobs which allow adoption.</li>
+                                            <li>Fixed some newly introduced UI bugs.</li>
+					    <li>Placeholders for new 3rd Job skills. They do nothing at the moment.</li>
+                                        </ul>
+					- Gamuza<br/><br/>
                                         01/17/2014: Various fixes:
                                         <ul style="margin-left: 5px">
                                             <li>Maximum base level cap raised to 175 for 3rd Jobs.</li>
@@ -102,7 +112,7 @@
                                             <li>Added job bonuses up to Job Lv.60 for 3rd Jobs.</li>
                                             <li>Tweaked HP values of all jobs and modified Kagerou/Oboro, Rune Knight, Warlock, Mechanic and Sorcerer values. They should be more accurate now.</li>
                                             <li>Fixed bonus HP for Super Novices at Base Lv.99. Now it's not affected by VIT.</li>
-					    <li>Fixed Mental Strength damage reduction.</li>
+					    <li><span style="text-decoration: line-through;">Fixed Mental Strength damage reduction.</span> Fixed Assumptio defense increase. It was also doubling Soft DEF/MDEF.</li>
                                         </ul>
                                         - Gamuza
 		            	</td>
@@ -219,8 +229,8 @@
 				                <tr>
 				                	<td class="bgLtRow4 padded optCaption">Points</td>
 	                    			<td class="bgLtRow2 padded optArea"><span id="A_STPOINT">48</span></td>
-				                	<td class="bgLtRow4 padded optCaption">Adopted</td>
-				                	<td class="bgLtRow2 padded optArea"><input name="A_youshi" onclick="calc()" type="checkbox"></td>
+				                	<td class="bgLtRow4 padded optCaption" id="adoptedLabel">Adopted</td>
+				                	<td class="bgLtRow2 padded optArea"><input id="adoptedCheck" name="A_youshi" onclick="calc()" type="checkbox"></td>
 				                	<td class="bgLtRow4 padded optCaption">Auto BaseLVL</td>
 				                	<td class="bgLtRow2 padded optArea">
 				                		<input name="BLVauto" checked="checked" type="checkbox">

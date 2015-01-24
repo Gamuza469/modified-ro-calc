@@ -158,6 +158,20 @@ function ChangeJob( n )
 	
 	// updated extended info
 	PrepExtenededInfo();
+	
+	// disable adopted checkbox
+	CheckAdoptedAvailability();
+}
+
+function CheckAdoptedAvailability () {
+    if ((n_A_JOB >= 0 && n_A_JOB <= 20) || (n_A_JOB >= 48 && n_A_JOB <= 70 && (n_A_JOB % 2) === 0 ) || (n_A_JOB === 73)) {
+	$('#adoptedLabel').text('Adopted');
+	$('#adoptedCheck').show();
+    } else {
+	$('#adoptedLabel').text('');
+	$('#adoptedCheck').attr('checked', false);
+	$('#adoptedCheck').hide();
+    }
 }
 
 function PrepExtenededInfo()

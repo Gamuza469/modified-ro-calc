@@ -814,29 +814,30 @@ function CalcExtendedInfo()
 		NowBaseExp = Math.floor(PC_BaseExp[rebirthClass][n_A_BaseLV] * NowBaseExp / 100);
 
 		var wkk11;
-		wkk11 = "<Font size=2>"+GetWord(156)+"<B>"+ Kanma(PC_BaseExp[rebirthClass][n_A_BaseLV] - NowBaseExp) +" </B>exp<BR>";
+		wkk11 = "<Font size=2>Base EXP points needed to reach next level: <B>"+ Kanma(PC_BaseExp[rebirthClass][n_A_BaseLV] - NowBaseExp) +"</B><br/>";
 
 		var MonsterNum=0;
 		var OneCheck = 0;
 		if ( n_B[en_BASEEXP] !== 0 )
 		{
-			for ( var i = n_A_BaseLV; i < 99 && JobType != 8; i++ )
+			for ( var i = n_A_BaseLV; i < CONST_MAXLVL && JobType != 8; i++ )
 			{
 				var LvUpExp = PC_BaseExp[rebirthClass][i];
-				var w1 = Math.floor((LvUpExp - NowBaseExp) / n_B[en_BASEEXP] / expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]));
+				
+				var w1 = Math.floor((LvUpExp - NowBaseExp) / n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]));
 				MonsterNum += w1;
-				NowBaseExp += w1 * n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
+				NowBaseExp += w1 * n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
 
 				while ( NowBaseExp < LvUpExp )
 				{
-					NowBaseExp += n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
+					NowBaseExp += n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
 					MonsterNum += 1
 				}
 				
-				if ( OneCheck === 0 )
+				if ( OneCheck === 0 ) //For the current level
 				{
 					OneCheck = 1;
-					wkk11 += "(<B>" + n_B[en_CLASS] + " </B>gives<B> " + Kanma(MonsterNum) + "</B>"+GetWord(159)+")<BR>";
+					wkk11 += "You need to kill <B>" +Kanma(MonsterNum) + " " + n_B[en_CLASS] + "</B> to level up.<BR>";
 				}
 				
 				NowBaseExp -= LvUpExp;
@@ -848,35 +849,35 @@ function CalcExtendedInfo()
 			
 			if ( JobType !== 8 )
 			{
-				wkk11 += "BaseLv99"+ GetWord(158) + "<B> "+ Kanma(MonsterNum) +"</B> " + n_B[en_CLASS] + "s" +GetWord(159)+"<BR><BR>";
+				wkk11 += "To reach Base Lv.99 you need to kill <B> "+ Kanma(MonsterNum) +"</B> " + n_B[en_CLASS] +GetWord(159)+".<BR>";
 			}
 			
-			for ( var i = n_A_BaseLV; i < 160 && JobType === 8; i++ )
+			for ( var i = n_A_BaseLV; i < CONST_MAXLVL_THIRD && JobType === 8; i++ )
 			{
 				var LvUpExp = PC_BaseExp[rebirthClass][i];
 				
-				var w1 = Math.floor((LvUpExp - NowBaseExp) / n_B[en_BASEEXP] / expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]));
+				var w1 = Math.floor((LvUpExp - NowBaseExp) / n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]));
 				MonsterNum += w1;
-				NowBaseExp += w1 * n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
+				NowBaseExp += w1 * n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
 
 				while(NowBaseExp < LvUpExp)
 				{
-					NowBaseExp += n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
+					NowBaseExp += n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
 					MonsterNum += 1
 				}
 				
 				if(OneCheck==0)
 				{
 					OneCheck = 1;
-					wkk11 += "(You need <B>" +Kanma(MonsterNum) + " " + n_B[en_CLASS] + " </B> to level up)<br/>";
+					wkk11 += "You need to kill <B>" +Kanma(MonsterNum) + " " + n_B[en_CLASS] + " </B> to level up.<br/>";
 				}
 				
 				NowBaseExp -= LvUpExp;
 				if(NowBaseExp > LvUpExp -1)
 					NowBaseExp = LvUpExp -1;
 			}
-			if (JobType == 8)
-				wkk11 += "BaseLv160"+ GetWord(158) + "<B> "+ Kanma(MonsterNum) +"</B> " + n_B[en_CLASS] + "s" + GetWord(159)+"<BR><BR>";
+			if (JobType === 8)
+				wkk11 += "To reach Base Lv.175 you need to kill <B> "+ Kanma(MonsterNum) +"</B> " + n_B[en_CLASS] + GetWord(159)+".<BR>";
 			//wkk11 += "Until BaseLv99: <B>"+ Kanma(MonsterNum) +"</B> more "+ n_B[1] +" kill"+(Kanma(MonsterNum)!=1?"s":"")+"<BR><BR>";
 		}
 
@@ -890,43 +891,45 @@ function CalcExtendedInfo()
 		else if ( ( n_A_JOB == cls_SNOVI || n_A_JOB === cls_ENOVI ) && n_A_JobLV == 99)
 			NowJobExp = 0;
 
-		wkk11 += GetWord(157)+"<B>"+ Kanma(PC_JobExp[JobType][n_A_JobLV] - NowJobExp) +"</B> exp<BR>";
+		wkk11 += "<hr>Job EXP points needed to reach next level: <B>"+ Kanma(PC_JobExp[JobType][n_A_JobLV] - NowJobExp) +"</B><br/>";
 
 		MonsterNum=0;
 		OneCheck = 0;
-		if ( n_B[17] != 0 )
+		if ( n_B[en_JOBEXP] != 0 )
 		{
 			//for(i=1;PC_JobExp[JobType][i]!=0;i++);
 			//var MaxJobLV = i;
 			var MaxJobLV = 50;//PC_JobExp[JobType].length-1
-			if (n_A_JOB == 0 || n_A_JOB == 34) MaxJobLV = 10;
-			if((1 <= n_A_JOB && n_A_JOB <= 6) || n_A_JOB == 41)
+			if (n_A_JOB === 0 || n_A_JOB === 34) MaxJobLV = 10;
+			if((n_A_JOB >= 1 && n_A_JOB <= 6) || n_A_JOB === 41)
 				MaxJobLV = 50;
-			if((21 <= n_A_JOB && n_A_JOB <= 33) || (43 <= n_A_JOB && n_A_JOB <= 45))
+			if((n_A_JOB >= 21 && n_A_JOB <= 33) || (n_A_JOB >= 44 && n_A_JOB <= 45))
 				MaxJobLV = 70;
-			if (n_A_JOB === cls_ENOVI)
+			if (n_A_JOB === cls_SNOVI)
 				MaxJobLV = 99;
+			if (n_A_JOB >= 46 && n_A_JOB <= 71)
+				MaxJobLV = 60;
 			for(i=n_A_JobLV;i<MaxJobLV;i++)
 			{
 				var LvUpExp = PC_JobExp[JobType][i];
-				var expReal = Math.floor(n_B[17] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL])) + ((n_B[17] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL])) % expReal != 0 ? 1 : 0);
-				var w1 = Math.floor((LvUpExp - NowJobExp) / expReal) + ((LvUpExp - NowJobExp) % expReal != 0 ? 1 : 0);
-				MonsterNum += w1;
-
+				/*var expReal = Math.floor(n_B[en_JOBEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL])) + ((n_B[en_JOBEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL])) % expReal != 0 ? 1 : 0);
+				var w1 = Math.floor((LvUpExp - NowJobExp) / expReal) + ((LvUpExp - NowJobExp) % expReal != 0 ? 1 : 0);*/
+				var w1 = Math.floor((LvUpExp - NowJobExp) / n_B[en_JOBEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_JOBEXP]));
 				
-				NowJobExp += w1 * expReal;
+				MonsterNum += w1;
+				NowJobExp += w1;
 				//var b = Math.floor((LvUpExp - NowJobExp) / (a*1.0));
 				//NowJobExp += b*a;
-				/*while(NowJobExp < LvUpExp)
+				while(NowJobExp < LvUpExp)
 				{
-					NowJobExp += a;
+					NowJobExp += n_B[en_JOBEXP];
 					MonsterNum += 1
-				}*/
+				}
 				//MonsterNum += b;
-				if(OneCheck==0)
+				if(OneCheck === 0)
 				{
 					OneCheck = 1;
-					wkk11 += "(You need <B>" + Kanma(MonsterNum) + " " + n_B[en_CLASS] +" </B>to level up)<BR>";
+					wkk11 += "You need to kill <B>" + Kanma(MonsterNum) + " " + n_B[en_CLASS] +" </B>to level up.<BR>";
 					//wkk11 += "(Equals <B>" + n_B[en_CLASS] +" "+ Kanma(MonsterNum) +"</B> "+ n_B[1] +" kill"+(Kanma(MonsterNum)!=1?"s":"")+GetWord(159)+")<BR>";
 				}
 				NowJobExp -= LvUpExp;
@@ -934,7 +937,7 @@ function CalcExtendedInfo()
 				if(NowJobExp > LvUpExp -1)
 					NowJobExp = LvUpExp -1;
 			}
-			wkk11 += "JobLv"+ MaxJobLV +GetWord(158)+"<B> "+ Kanma(MonsterNum)+"</B> " + n_B[en_CLASS] + "s" +GetWord(159)+"<BR>";
+			wkk11 += "To reach Job Lv."+ MaxJobLV +" you need to kill<B> "+ Kanma(MonsterNum)+"</B> " + n_B[en_CLASS] +GetWord(159)+".<BR>";
 			//wkk11 += "Until JobLv"+ MaxJobLV +": <B>"+ Kanma(MonsterNum) +"</B> more "+ n_B[1] +" kill"+(Kanma(MonsterNum)!=1?"s":"")+"<BR><BR>";
 		}
 

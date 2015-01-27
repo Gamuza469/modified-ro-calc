@@ -617,7 +617,8 @@ with ( document.calcForm )
 }
 
 	// updated extended info
-	CalcExtendedInfo();
+	PrepExtenededInfo();
+	//CalcExtendedInfo();
 }
 }
 
@@ -2354,10 +2355,10 @@ function Init()
 
 	// -----------
 	
-	for ( var i = 0; i < cls_COUNT; i++ )
+	/*for ( var i = 0; i < cls_COUNT; i++ )
 	{ // Jobs
 		document.calcForm.A_JOB.options[i] = new Option(JobName[i][Language],i);
-	}
+	}*/
 
 	for ( var i = 0; i < ArrowOBJ.length; i++ )
 	{ // Build Arrow List

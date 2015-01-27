@@ -95,26 +95,42 @@
 	            <table class="bgLtTable aligned">
 	            	<tbody><tr>
 	            		<td class="bgLtRow3 padded optCaption">
-					01/24/2014:
-					<ul style="margin-left: 5px">
-					    <li>Tweaked 3rd jobs HP values some more. They should be accurate up to Lv.150.</li>
-					    <li>Same goes for SP values. However, these should be accurate up to Lv.175.</li>
-					    <li>Fixed SP values for Kagerou/Oboro.</li>
-					    <li>The 'Adopted' checkbox will only be available on jobs which allow adoption.</li>
-                                            <li>Fixed some newly introduced UI bugs.</li>
-					    <li>Placeholders for new 3rd Job skills. They do nothing at the moment.</li>
-                                        </ul>
-					- Gamuza<br/><br/>
-                                        01/17/2014: Various fixes:
-                                        <ul style="margin-left: 5px">
-                                            <li>Maximum base level cap raised to 175 for 3rd Jobs.</li>
-                                            <li>Maximum stat limit raised to 130 for 3rd Jobs.</li>
-                                            <li>Added job bonuses up to Job Lv.60 for 3rd Jobs.</li>
-                                            <li>Tweaked HP values of all jobs and modified Kagerou/Oboro, Rune Knight, Warlock, Mechanic and Sorcerer values. They should be more accurate now.</li>
-                                            <li>Fixed bonus HP for Super Novices at Base Lv.99. Now it's not affected by VIT.</li>
-					    <li><span style="text-decoration: line-through;">Fixed Mental Strength damage reduction.</span> Fixed Assumptio defense increase. It was also doubling Soft DEF/MDEF.</li>
-                                        </ul>
-                                        - Gamuza
+					01/31/2014:
+					    <ul style="margin-left: 5px;">
+						<li>Corrected the base/job experience tables.</li>
+						<li>Tweaked the Experience calculator. Fixed the formulas but now it's very slow.</li>
+						<li>Experience Calculator is useful now. It's not bug free yet, though.</li>
+						<li>Extended info now updates when changing base levels.</li>
+						<li>Reestructured the job list.</li>
+						<li>Fixed some monster skills.</li>
+						<li>Added some more monster skills to play around.</li>
+					    </ul>
+					    -Gamuza<br/><br/>
+					01/24/2014:<input type="button" value="Show/Hide" onclick="javascript:$('#note2').toggle()">
+					<span style="display: none;" id="note2">
+					    <ul style="margin-left: 5px;">
+						<li>Tweaked 3rd jobs HP values some more. They should be accurate up to Lv.150.</li>
+						<li>Same goes for SP values. However, these should be accurate up to Lv.175.</li>
+						<li>Fixed SP values for Kagerou/Oboro.</li>
+						<li>The 'Adopted' checkbox will only be available on jobs which allow adoption.</li>
+						<li>Fixed some newly introduced UI bugs.</li>
+						<li>Placeholders for new 3rd Job skills. They do nothing at the moment.</li>
+					    </ul>
+					    - Gamuza<br/>
+					</span><br/>
+                                        01/17/2014:<input type="button" value="Show/Hide" onclick="javascript:$('#note1').toggle()">
+					<span style="display: none;" id="note1"><br/>
+					    Various fixes:
+					    <ul style="margin-left: 5px">
+						<li>Maximum base level cap raised to 175 for 3rd Jobs.</li>
+						<li>Maximum stat limit raised to 130 for 3rd Jobs.</li>
+						<li>Added job bonuses up to Job Lv.60 for 3rd Jobs.</li>
+						<li>Tweaked HP values of all jobs and modified Kagerou/Oboro, Rune Knight, Warlock, Mechanic and Sorcerer values. They should be more accurate now.</li>
+						<li>Fixed bonus HP for Super Novices at Base Lv.99. Now it's not affected by VIT.</li>
+						<li><span style="text-decoration: line-through;">Fixed Mental Strength damage reduction.</span> Fixed Assumptio defense increase. It was also doubling Soft DEF/MDEF.</li>
+					    </ul>
+					    - Gamuza<br/>
+					</span>
 		            	</td>
 		            </tr>
 	            </tbody></table>
@@ -189,7 +205,104 @@
 				                    </td>
 				                    <td class="bgLtRow3 padded optCaption">Class</td>
 				                    <td class="bgLtRow1 padded optArea">
-				                        <select name="A_JOB" onchange="ChangeJob(this[this.selectedIndex].value) | StAllCalc() | StCalc()"><option selected="selected" value="0">Novice</option><option value="1">Swordman</option><option value="2">Thief</option><option value="3">Acolyte</option><option value="4">Archer</option><option value="5">Mage</option><option value="6">Merchant</option><option value="7">Knight</option><option value="8">Assassin</option><option value="9">Priest</option><option value="10">Hunter</option><option value="11">Wizard</option><option value="12">Blacksmith</option><option value="13">Crusader</option><option value="14">Rogue</option><option value="15">Monk</option><option value="16">Bard</option><option value="17">Dancer</option><option value="18">Sage</option><option value="19">Alchemist</option><option value="20">Super Novice</option><option value="21">Lord Knight</option><option value="22">Assassin Cross</option><option value="23">High Priest</option><option value="24">Sniper</option><option value="25">High Wizard</option><option value="26">Mastersmith</option><option value="27">Paladin</option><option value="28">Stalker</option><option value="29">Champion</option><option value="30">Minstrel</option><option value="31">Gypsy</option><option value="32">Scholar</option><option value="33">Biochemist</option><option value="34">High Novice</option><option value="35">High Swordman</option><option value="36">High Thief</option><option value="37">High Acolyte</option><option value="38">High Archer</option><option value="39">High Magician</option><option value="40">High Merchant</option><option value="41">Taekwon Kid</option><option value="42">Teakwon Master</option><option value="43">Soul Linker</option><option value="44">Ninja</option><option value="45">Gunslinger</option><option value="46">Rune Knight (non-trans)</option><option value="47">Rune Knight (trans)</option><option value="48">Glt Cross (non-trans)</option><option value="49">Glt Cross (trans)</option><option value="50">Arch Bishop (non-trans)</option><option value="51">Arch Bishop (trans)</option><option value="52">Ranger (non-trans)</option><option value="53">Ranger (trans)</option><option value="54">Warlock (non-trans)</option><option value="55">Warlock (trans)</option><option value="56">Mechanic (non-trans)</option><option value="57">Mechanic (trans)</option><option value="58">Royal Guard (non-trans)</option><option value="59">Royal Guard (trans)</option><option value="60">Shadow Chaser (non-trans)</option><option value="61">Shadow Chaser (trans)</option><option value="62">Sura (non-trans)</option><option value="63">Sura (trans)</option><option value="64">Maestro (non-trans)</option><option value="65">Maestro (trans)</option><option value="66">Wanderer (non-trans)</option><option value="67">Wanderer (trans)</option><option value="68">Sorcerer (non-trans)</option><option value="69">Sorcerer (trans)</option><option value="70">Geneticist (non-trans)</option><option value="71">Geneticist (trans)</option><option value="72">Kagero/Oboro</option><option value="73">Expanded Super Novice</option></select>
+				                        <select name="A_JOB" onchange="ChangeJob(this[this.selectedIndex].value) | StAllCalc() | StCalc()">
+							    <optgroup label="Novice">
+								<option selected="selected" value="0">Novice</option>
+							    </optgroup>
+							    <optgroup label="1st Job">
+								    <option value="1">Swordman</option>
+								    <option value="2">Thief</option>
+								    <option value="3">Acolyte</option>
+								    <option value="4">Archer</option>
+								    <option value="5">Mage</option>
+								    <option value="6">Merchant</option>
+							    </optgroup>
+							    <optgroup label="2nd Job">
+								    <option value="7">Knight</option>
+								    <option value="8">Assassin</option>
+								    <option value="9">Priest</option>
+								    <option value="10">Hunter</option>
+								    <option value="11">Wizard</option>
+								    <option value="12">Blacksmith</option>
+								    <option value="13">Crusader</option>
+								    <option value="14">Rogue</option>
+								    <option value="15">Monk</option>
+								    <option value="16">Bard</option>
+								    <option value="17">Dancer</option>
+								    <option value="18">Sage</option>
+								    <option value="19">Alchemist</option>
+							    </optgroup>
+							    <optgroup label="Other Novice classes">
+								    <option value="20">Super Novice</option>
+								    <option value="73">Expanded Super Novice</option>
+							    </optgroup>
+							    <optgroup label="Transcended Novice">
+								    <option value="34">High Novice</option>
+							    </optgroup>
+							    <optgroup label="Transcended 1st Job">
+								    <option value="35">High Swordman</option>
+								    <option value="36">High Thief</option>
+								    <option value="37">High Acolyte</option>
+								    <option value="38">High Archer</option>
+								    <option value="39">High Magician</option>
+								    <option value="40">High Merchant</option>
+							    </optgroup>
+							    <optgroup label="Transcended 2nd Job">
+								    <option value="21">Lord Knight</option>
+								    <option value="22">Assassin Cross</option>
+								    <option value="23">High Priest</option>
+								    <option value="24">Sniper</option>
+								    <option value="25">High Wizard</option>
+								    <option value="26">Mastersmith</option>
+								    <option value="27">Paladin</option>
+								    <option value="28">Stalker</option>
+								    <option value="29">Champion</option>
+								    <option value="30">Minstrel</option>
+								    <option value="31">Gypsy</option>
+								    <option value="32">Scholar</option>
+								    <option value="33">Biochemist</option>
+							    </optgroup>
+							    <optgroup label="Transcended 3rd Job">
+								    <option value="47">Rune Knight (trans)</option>
+								    <option value="49">Guillotine Cross (trans)</option>
+								    <option value="51">Arch Bishop (trans)</option>
+								    <option value="53">Ranger (trans)</option>
+								    <option value="55">Warlock (trans)</option>
+								    <option value="57">Mechanic (trans)</option>
+								    <option value="59">Royal Guard (trans)</option>
+								    <option value="61">Shadow Chaser (trans)</option>
+								    <option value="63">Sura (trans)</option>
+								    <option value="65">Maestro (trans)</option>
+								    <option value="67">Wanderer (trans)</option>
+								    <option value="69">Sorcerer (trans)</option>
+								    <option value="71">Geneticist (trans)</option>
+							    </optgroup>
+							    <optgroup label="Non-Transcended 3rd Job">
+								    <option value="46">Rune Knight (non-trans)</option>
+								    <option value="48">Guillotine Cross (non-trans)</option>
+								    <option value="50">Arch Bishop (non-trans)</option>
+								    <option value="52">Ranger (non-trans)</option>
+								    <option value="54">Warlock (non-trans)</option>
+								    <option value="56">Mechanic (non-trans)</option>
+								    <option value="58">Royal Guard (non-trans)</option>
+								    <option value="60">Shadow Chaser (non-trans)</option>
+								    <option value="62">Sura (non-trans)</option>
+								    <option value="64">Maestro (non-trans)</option>
+								    <option value="66">Wanderer (non-trans)</option>
+								    <option value="68">Sorcerer (non-trans)</option>
+								    <option value="70">Geneticist (non-trans)</option>
+							    </optgroup>
+							    <optgroup label="Expanded 1st Job">
+								    <option value="41">Taekwon Kid</option>
+								    <option value="44">Ninja</option>
+								    <option value="45">Gunslinger</option>
+							    </optgroup>
+							    <optgroup label="Expanded 2nd Job">
+								    <option value="42">Teakwon Master</option>
+								    <option value="43">Soul Linker</option>
+								    <option value="72">Kagerou/Oboro</option>
+							    </optgroup>
+						    </select>
 				                    </td>
 				                </tr>
 				                <tr>

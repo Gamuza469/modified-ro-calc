@@ -4011,22 +4011,49 @@ function calcRaceElementalReduction()
 }
 var enemySkills = [ //0 normal atk, 1 ign def, 2 mdef based, 3 mdef ign, 4 ranged, 5 ranged ign def
 //-1 non elemental -2 element dependent
-["Base Atk", 0,-1, 1], // baseAtk.
-["Piercing attack", 1,-1, 1], // PIERCINGATT. 1 = ignoring def
-["Self destruction", 1,-1, 1], // SELFDESTRUCTION
-["Combo attack", 0,-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], // COMBOATTACK
+["Basic Attack", 0,-1, 1], // baseAtk.
+["Random (Elemental) Attack", 0,-2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // ELEMENT ATTACK
+["Piercing Attack", 1,-1, 1], // PIERCINGATT. 1 = ignoring def
+["Self Destruction", 1,-1, 1], // SELFDESTRUCTION
+["Combo Attack", 0,-1, 1], // COMBOATTACK
 ["Critical Hit", 0,-1, 1.4], // CRITICALSLASH
-["Dark cross", 0,ele_DARK, 1.35, 1.7, 2.05, 2.4, 2.75, 3.1, 3.45, 3.8, 4.15, 4.50], // DARKCROSS
-["Dark strike", 2,ele_DARK, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5], // DARKSTRIKE
-["Dark thunder", 2,ele_DARK, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], // DARKTHUNDER
-["Grand cross of darkness", 1,ele_DARK, 1.4, 1.8, 2.2, 2.6, 3, 3.4, 3.8, 4.2, 4.6, 5], // GRANDDARKNESS
-["Ranged attack", 4,-1, 1], // RANGEDATT
-["Hell's judgement", 2,ele_DARK, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // HELLJUDGEMENT
-["Ice Breath", 2,ele_WATER, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // ICEBREATH
-["Pulse Strike", 2,-1, 1, 2, 3, 4, 5], // PULSESTRIKE
-["Vampire Gift", 2,ele_NEUTRAL, 1, 2, 3, 4, 5], // VAMPIRE GIFT
-["Elemental attack", 0,-2, 1, 2, 3, 4, 5], // ELEMENT ATTACK
-["Earthquake (non ranged)", 1,ele_NEUTRAL, 3*3, 5*3, 6*3, 8*3, 10*3, 12*3, 13*3, 15*3, 16*3, 18*3], // EARTHQUAKE
+["Splash Attack", 0, ele_NEUTRAL, 1],
+["Dark Cross", 0,ele_DARK, 1.35, 1.7, 2.05, 2.4, 2.75, 3.1, 3.45, 3.8, 4.15, 4.50], // DARKCROSS
+["Dark Strike", 2,ele_DARK, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5], // DARKSTRIKE
+["Dark Thunder", 2,ele_DARK, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], // DARKTHUNDER
+["Ranged Attack", 4,-1, 1], // RANGEDATT
+//["Break (Armor, Weapon, Shield, Helm)", 0, ele_NEUTRAL, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+
+["Shadow Property Attack", 0, ele_DARK, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Fire Property Attack", 0, ele_FIRE, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Earth Property Attack", 0, ele_EARTH, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Holy Property Attack", 0, ele_HOLY, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Water Property Attack", 0, ele_WATER, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Poison Property Attack", 0, ele_POISON, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Ghost Property Attack", 0, ele_GHOST, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Undead Property Attack", 0, ele_UNDEAD, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+["Wind Property Attack", 0, ele_WIND, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+
+["Blood Drain", 0, ele_DARK, 1],
+["Energy Drain", 0, ele_DARK, 1],
+["Exile", 4, ele_NEUTRAL, 1],
+["Fatal Wound", 0, ele_NEUTRAL, 1],
+["Petrify Attack", 0, ele_EARTH, 1],
+["Curse Attack", 0, ele_DARK, 1],
+["Poison(ing) Attack", 0, ele_POISON, 1],
+["Sleep Attack", 0, ele_NEUTRAL, 1],
+["Stun Attack", 0, ele_NEUTRAL, 1],
+["Blind Attack", 0, ele_DARK, 1],
+
+["Grand Cross of Darkness", 1,ele_DARK, 1.4, 1.8, 2.2, 2.6, 3, 3.4, 3.8, 4.2, 4.6, 5], // GRANDDARKNESS
+["Hell's Judgement", 0, ele_NEUTRAL, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // HELLJUDGEMENT
+["Ice Breath", 0, ele_WATER, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // ICEBREATH
+["Fire Breath", 0, ele_FIRE, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // FIREBREATH
+["Acid Breath", 0, ele_POISON, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // ACIDBREATH
+["Thunder Breath", 0, ele_WIND, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // ACIDBREATH
+["Pulse Strike", 0,-1, 1, 2, 3, 4, 5], // PULSESTRIKE
+["Vampire Gift", 0,ele_NEUTRAL, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5], // VAMPIRE GIFT
+["Earthquake (non-ranged)", 1,ele_NEUTRAL, 3*3, 5*3, 6*3, 8*3, 10*3, 12*3, 13*3, 15*3, 16*3, 18*3], // EARTHQUAKE
 ["Earthquake (ranged)", 5,ele_NEUTRAL, 3*3, 5*3, 6*3, 8*3, 10*3, 12*3, 13*3, 15*3, 16*3, 18*3], // EARTHQUAKE
 
 ]

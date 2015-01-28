@@ -693,6 +693,10 @@ function CalcEquipAtk()
 			equipmentAttack += Math.floor( ( dexBonus + strBonus ) * acolyteBuffs[ksPPChange] / 5.0 );
 		}
 	}
+	
+	if (SkillSearch(skill_SUR_FLASH_COMBO)) {
+	    equipmentAttack += 40 * SkillSearch(skill_SUR_FLASH_COMBO);
+	}
 		
 	return equipmentAttack;
 }
@@ -1176,7 +1180,11 @@ function CalcRangedMod()
 	}
 	if(EquipNumSearch(1514))
 	{//Evil Marching Hat
-		if (n_A_HEAD_DEF_PLUS >= 9) n_tok[bon_DMG_RANGE] += 5;
+		if (n_A_HEAD_DEF_PLUS >= 9) 
+		    n_tok[bon_DMG_RANGE] += 5;
+	}
+	if (SkillSearch(skill_RAN_NO_LIMITS)) {
+		n_tok[bon_DMG_RANGE] += 50 * SkillSearch(skill_RAN_NO_LIMITS);
 	}
 	if (not_use_card == 1)
 	rangedMod = 0;
@@ -3383,6 +3391,7 @@ function CalcVariableCast()
 	variableCastTime *= w /100;
 
 	w = 100;
+	
 	if(StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
 		w -= StPlusCalc2(bon_CAST_SKILL+ n_A_ActiveSkill);
 	if(StPlusCard(bon_CAST_SKILL+ n_A_ActiveSkill) != 0)
@@ -3419,7 +3428,7 @@ function CalcVariableCast()
 	{
 		variableCastTime *= ( 100 - 15 * acolyteBuffs[ksSuffragium] ) / 100;
 	}
-	if ( SkillSearch( 322 ) )
+	if ( SkillSearch( skill_PR_MEMORIZE ) )
 	{
 		variableCastTime = variableCastTime / 2;
 	}
@@ -3433,6 +3442,10 @@ function CalcVariableCast()
 			variableCastTime = 0;
 		}
 	}
+	
+	if (SkillSearch(skill_WAR_INTENSE_TELEKINESIS)) {
+	    variableCastTime -= (10 * SkillSearch(skill_WAR_INTENSE_TELEKINESIS)) / 100;
+;	}
 		
 	return variableCastTime;
 }

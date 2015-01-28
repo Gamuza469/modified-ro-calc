@@ -225,6 +225,9 @@ input.textLabel{
 input.poll{
 	width:100px;
 }
+input[type='number']{
+    width: 100px;
+}
 input.noborder{
 	background-color:transparent;
 	border:none;

@@ -708,6 +708,7 @@ status_en_DEEPSLEEP = 25;
 status_en_VENOM_IMPRESS = 26;
 status_en_MARSH_OF_ABYSS = 27;
 status_en_GLOOMY_DAY = 28;
+status_en_DARK_CLAW = 29;
 
 // monsterBuffs
 var status_en_buff_IncreaseAGI = 0;
@@ -1603,6 +1604,20 @@ skill_KAG_THROW_EXPLOSIVE_KUNAI = 729;
 skill_KAG_SUMMON_ELEMENTAL_SEAL = 730; //ONE SKILL FOR EACH ELEMENT
 skill_KAG_GET_ELEMENTAL_SEAL = 731;
 
+skill_RUN_DRAGON_BREATH_WATER = 732;
+skill_GLT_DARK_CLAW = 733;
+skill_ABI_OFFERTORIUM = 734;
+skill_RAN_NO_LIMITS = 735;
+skill_WAR_INTENSE_TELEKINESIS = 736;
+skill_MEC_LAVA_FLOW = 737;
+skill_ROY_KINGS_GRACE = 738;
+skill_SHA_EMERGENCY_ESCAPE = 739;
+skill_SUR_FLASH_COMBO = 740;
+skill_MIWA_FRIGGS_SONG = 741;
+skill_SOR_ELEMENTAL_SHIELD = 742;
+skill_GEN_HALLUCINATION_DRUG = 743;
+skill_3RD_FULL_THROTTLE = 744;
+
 }
 
 // Buffs
@@ -1821,8 +1836,8 @@ var ksDelayA = 0;
 var ksDelayASPD = 1;
 var ksDelayGlobal = 2;
 var ksDelayAnimation = 3;
-var ksDelayE = 4;
-var ksDelayF = 5;
+var ksDelayE = 4; //Martyr Reckoning?
+var ksDelayF = 5; //TKM Heat?
 var ksDelaySkillDuration = 6;
 var ksDelayCooldown = 7;
 }

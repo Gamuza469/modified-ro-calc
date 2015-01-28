@@ -1,124 +1,129 @@
-var RANGED_SKILLS = [skill_SN_FOCUSED_ARROW_STRIKE,
-					skill_AR_ARROW_SHOWER,
-					skill_KN_SPEAR_STAB,
-					skill_KN_SPEAR_BOOMERANG,
-					skill_BA_MELODY_STRIKE,
-					skill_DA_SLINGING_ARROW,
-					skill_LK_TRAUMATIC_BLOW,
-					skill_LK_VITAL_STRIKE,
-					skill_CG_ARROW_VULCAN,
-					skill_ALL_TOMAHAWK_THROWING,
-					skill_AS_VENOM_KNIFE,
-					skill_HU_FANTASTIC_ARROW,
-					skill_GS_BULLS_EYE,
-					skill_GS_MAGICAL_BULLET,
-					skill_GS_TRIGGER_HAPPY_SHOT,
-					skill_GS_TRACKING,
-					skill_GS_DISARM,
-					skill_GS_WOUNDING_SHOT,
-					skill_GS_CROWD_CONTROL_SHOT,
-					skill_GS_FULL_BLAST,
-					skill_GS_WOUNDING_SHOT,
-					skill_GS_CROWD_CONTROL_SHOT,
-					skill_GS_FULL_BLAST,
-					skill_GS_SPREAD_SHOT,
-					skill_GS_GUNSLINGER_MINE,
-					skill_MIWA_GREAT_ECHO,
-					skill_RUN_HUNDRED_SPEAR,
-					skill_GEN_CART_CANNON,
-					skill_SUR_RAMPAGE_BLASTER,
-					skill_SUR_KNUCKLE_ARROW,
-					skill_SUR_LIGHTENING_RIDE,
-					skill_HW_STAVE_CRASHER,
-					skill_AR_DOUBLE_STRAFE,
-					skill_MO_THROW_SPIRIT_SPHERES,
-					skill_GS_TRIPLE_ACTION,
-					skill_HU_BEAST_STRAFING,
-					skill_HU_BLITZ_BEAT,
-					skill_SN_FALCON_ASSAULT,
-					skill_RAN_WARG_DASH,
-					skill_RAN_WARG_BITE,
-					skill_RAN_WARG_STRIKE,
-					skill_CR_SHIELD_BOOMERANG,
-					skill_CR_SHIELD_BOOMERANG_SL,
-					skill_PA_RAPID_SMITING,
-					skill_LK_CLASHING_SPIRAL,
-					skill_AX_SOUL_DESTROYER,
-					skill_NIN_THROW_DAGGER,
-					skill_NIN_THROW_KUNAI,
-					skill_NIN_THROW_HUUMA_SHURIKEN,
-					skill_NIN_KILLING_STRIKE,
-					skill_NIN_KILLING_STRIKE_MAX,
-					skill_AL_ACID_TERROR,
-					skill_BC_ACID_DEMONSTRATION,
-					skill_SHA_TRIANGLE_SHOT,
-					skill_KAG_CROSS_STRIKE,
-					skill_KAG_HUUMA_SHURIKEN_STRIKE];
-var MAGICAL_SKILLS = [skill_MON_DARK_STRIKE,
-				skill_MA_FIRE_BOLT,
-				skill_MA_COLD_BOLT,
-				skill_MA_LIGHTNING_BOLT,
-				skill_MA_FIRE_BALL,
-				skill_MA_FIRE_WALL,
-				skill_MA_FROST_DIVER,
-				skill_MA_THUNDER_STORM,
-				skill_MA_NAPALM_BEAT,
-				skill_MA_SOUL_STRIKE,
-				skill_WI_FIRE_PILLAR,
-				skill_WI_SIGHTRASHER,
-				skill_WI_METEOR_STORM,
-				skill_WI_JUPITEL_THUNDER,
-				skill_WI_LORD_OF_VERMILLION,
-				skill_WI_WATER_BALL,
-				skill_WATER_BALL2,
-				skill_WI_FROST_NOVA,
-				skill_WI_STORM_GUST,
-				skill_WI_EARTH_SPIKE,
-				skill_WI_HEAVENS_DRIVE,
-				skill_HEAVENS_DRIVE2,
-				skill_HW_NAPALM_VULCAN,
-				skill_AC_HOLY_LIGHT,
-				skill_PR_HOLY_LIGHT_SL,
-				skill_PR_MAGNUS_EXORCISMUS,
-				skill_SL_ESTIN,
-				skill_SL_ESTUN,
-				skill_SL_ESMA,
-				skill_NIN_FLAMING_PETALS,
-				skill_NIN_BLAZE_SHIELD,
-				skill_NIN_EXPLODING_DRAGON,
-				skill_NIN_FREEZING_SPEAR,
-				skill_NIN_SNOW_FLAKE_DRAFT,
-				skill_NIN_WIND_BLADE,
-				skill_NIN_LIGHTNING_JOLT,
-				skill_NIN_FIRST_WIND,
-				skill_WAR_DRAIN_LIFE,
-				skill_WAR_SOUL_EXPANSION,
-				skill_WAR_CRIMSON_ROCK,
-				skill_WAR_COMET,
-				skill_WAR_FROST_MISTY,
-				skill_WAR_JACK_FROST,
-				skill_WAR_CHAIN_LIGHTNING,
-				skill_WAR_EARTH_STRAIN,
-				skill_WAR_TETRA_VORTEX,
-				skill_ABI_JUDEX,
-				skill_ABI_ADORAMUS,
-				skill_SOR_FIRE_WALK,
-				skill_SOR_ELECTRIC_WALK,
-				skill_SOR_EARTH_GRAVE,
-				skill_SOR_DIAMOND_DUST,
-				skill_SOR_CLOUD_KILL,
-				skill_SOR_POISON_BUSTER,
-				skill_SOR_PSYCHIC_WAVE,
-				skill_SOR_SPELL_FIST_FBOLT,
-				skill_SOR_SPELL_FIST_CBOLT,
-				skill_SOR_SPELL_FIST_LBOLT,
-				skill_MIWA_METALLIC_SOUND,
-				skill_ROY_SHIELD_SPELL_MATK,
-				skill_AC_HEAL,
-				skill_PR_SANCTUARY,
-				skill_PR_TURN_UNDEAD,
-				skill_PR_RESSURECTION,
-				skill_HW_GRAVITY_FIELD];
+var RANGED_SKILLS = [
+    skill_SN_FOCUSED_ARROW_STRIKE,
+    skill_AR_ARROW_SHOWER,
+    skill_KN_SPEAR_STAB,
+    skill_KN_SPEAR_BOOMERANG,
+    skill_BA_MELODY_STRIKE,
+    skill_DA_SLINGING_ARROW,
+    skill_LK_TRAUMATIC_BLOW,
+    skill_LK_VITAL_STRIKE,
+    skill_CG_ARROW_VULCAN,
+    skill_ALL_TOMAHAWK_THROWING,
+    skill_AS_VENOM_KNIFE,
+    skill_HU_FANTASTIC_ARROW,
+    skill_GS_BULLS_EYE,
+    skill_GS_MAGICAL_BULLET,
+    skill_GS_TRIGGER_HAPPY_SHOT,
+    skill_GS_TRACKING,
+    skill_GS_DISARM,
+    skill_GS_WOUNDING_SHOT,
+    skill_GS_CROWD_CONTROL_SHOT,
+    skill_GS_FULL_BLAST,
+    skill_GS_WOUNDING_SHOT,
+    skill_GS_CROWD_CONTROL_SHOT,
+    skill_GS_FULL_BLAST,
+    skill_GS_SPREAD_SHOT,
+    skill_GS_GUNSLINGER_MINE,
+    skill_MIWA_GREAT_ECHO,
+    skill_RUN_HUNDRED_SPEAR,
+    skill_GEN_CART_CANNON,
+    skill_SUR_RAMPAGE_BLASTER,
+    skill_SUR_KNUCKLE_ARROW,
+    skill_SUR_LIGHTENING_RIDE,
+    skill_HW_STAVE_CRASHER,
+    skill_AR_DOUBLE_STRAFE,
+    skill_MO_THROW_SPIRIT_SPHERES,
+    skill_GS_TRIPLE_ACTION,
+    skill_HU_BEAST_STRAFING,
+    skill_HU_BLITZ_BEAT,
+    skill_SN_FALCON_ASSAULT,
+    skill_RAN_WARG_DASH,
+    skill_RAN_WARG_BITE,
+    skill_RAN_WARG_STRIKE,
+    skill_CR_SHIELD_BOOMERANG,
+    skill_CR_SHIELD_BOOMERANG_SL,
+    skill_PA_RAPID_SMITING,
+    skill_LK_CLASHING_SPIRAL,
+    skill_AX_SOUL_DESTROYER,
+    skill_NIN_THROW_DAGGER,
+    skill_NIN_THROW_KUNAI,
+    skill_NIN_THROW_HUUMA_SHURIKEN,
+    skill_NIN_KILLING_STRIKE,
+    skill_NIN_KILLING_STRIKE_MAX,
+    skill_AL_ACID_TERROR,
+    skill_BC_ACID_DEMONSTRATION,
+    skill_SHA_TRIANGLE_SHOT,
+    skill_KAG_CROSS_STRIKE,
+    skill_KAG_HUUMA_SHURIKEN_STRIKE,
+    skill_GEN_HALLUCINATION_DRUG
+];
+var MAGICAL_SKILLS = [
+    skill_MON_DARK_STRIKE,
+    skill_MA_FIRE_BOLT,
+    skill_MA_COLD_BOLT,
+    skill_MA_LIGHTNING_BOLT,
+    skill_MA_FIRE_BALL,
+    skill_MA_FIRE_WALL,
+    skill_MA_FROST_DIVER,
+    skill_MA_THUNDER_STORM,
+    skill_MA_NAPALM_BEAT,
+    skill_MA_SOUL_STRIKE,
+    skill_WI_FIRE_PILLAR,
+    skill_WI_SIGHTRASHER,
+    skill_WI_METEOR_STORM,
+    skill_WI_JUPITEL_THUNDER,
+    skill_WI_LORD_OF_VERMILLION,
+    skill_WI_WATER_BALL,
+    skill_WATER_BALL2,
+    skill_WI_FROST_NOVA,
+    skill_WI_STORM_GUST,
+    skill_WI_EARTH_SPIKE,
+    skill_WI_HEAVENS_DRIVE,
+    skill_HEAVENS_DRIVE2,
+    skill_HW_NAPALM_VULCAN,
+    skill_AC_HOLY_LIGHT,
+    skill_PR_HOLY_LIGHT_SL,
+    skill_PR_MAGNUS_EXORCISMUS,
+    skill_SL_ESTIN,
+    skill_SL_ESTUN,
+    skill_SL_ESMA,
+    skill_NIN_FLAMING_PETALS,
+    skill_NIN_BLAZE_SHIELD,
+    skill_NIN_EXPLODING_DRAGON,
+    skill_NIN_FREEZING_SPEAR,
+    skill_NIN_SNOW_FLAKE_DRAFT,
+    skill_NIN_WIND_BLADE,
+    skill_NIN_LIGHTNING_JOLT,
+    skill_NIN_FIRST_WIND,
+    skill_WAR_DRAIN_LIFE,
+    skill_WAR_SOUL_EXPANSION,
+    skill_WAR_CRIMSON_ROCK,
+    skill_WAR_COMET,
+    skill_WAR_FROST_MISTY,
+    skill_WAR_JACK_FROST,
+    skill_WAR_CHAIN_LIGHTNING,
+    skill_WAR_EARTH_STRAIN,
+    skill_WAR_TETRA_VORTEX,
+    skill_ABI_JUDEX,
+    skill_ABI_ADORAMUS,
+    skill_SOR_FIRE_WALK,
+    skill_SOR_ELECTRIC_WALK,
+    skill_SOR_EARTH_GRAVE,
+    skill_SOR_DIAMOND_DUST,
+    skill_SOR_CLOUD_KILL,
+    skill_SOR_POISON_BUSTER,
+    skill_SOR_PSYCHIC_WAVE,
+    skill_SOR_SPELL_FIST_FBOLT,
+    skill_SOR_SPELL_FIST_CBOLT,
+    skill_SOR_SPELL_FIST_LBOLT,
+    skill_MIWA_METALLIC_SOUND,
+    skill_ROY_SHIELD_SPELL_MATK,
+    skill_AC_HEAL,
+    skill_PR_SANCTUARY,
+    skill_PR_TURN_UNDEAD,
+    skill_PR_RESSURECTION,
+    skill_HW_GRAVITY_FIELD
+];
 function clashingATKFormula(weight)
 {
 	CalcAtk();
@@ -761,6 +766,8 @@ function CalcSkillDamage()
 			skill_KAG_SPIRIT_BREAKER,
 			skill_KAG_HUUMA_SHURIKEN_STRIKE,
 			skill_KAG_THROW_EXPLOSIVE_KUNAI,
+			skill_GLT_DARK_CLAW,
+			skill_GEN_HALLUCINATION_DRUG,
 			"NULL"];
 	for ( var iw=0; w_ActS[iw] != n_A_ActiveSkill && w_ActS[iw] != "NULL"; iw++ );
 	if ( n_A_ActiveSkill == w_ActS[iw] )
@@ -2017,6 +2024,22 @@ function CalcSkillDamage()
 			fixedCastTime *= 0.0;
 			variableCastTime *= 1.0;
 			n_Delay[ksDelayGlobal] = 1.0 * n_A_ActiveSkillLV;
+		}
+		else if ( n_A_ActiveSkill === skill_GLT_DARK_CLAW )
+		{
+			w_SkillMod = 1 * n_A_ActiveSkillLV;
+			
+			fixedCastTime *= 0.0;
+			variableCastTime *= 0.0;
+			n_Delay[ksDelayGlobal] = 0.4 - 0.1 * n_A_ActiveSkillLV;
+		}
+		else if ( n_A_ActiveSkill === skill_GEN_HALLUCINATION_DRUG )
+		{
+			w_SkillMod = 1;
+			
+			fixedCastTime *= 0.0;
+			variableCastTime *= 0.0;
+			n_Delay[ksDelayGlobal] = 0.4 - 0.1 * n_A_ActiveSkillLV;
 		}
 
 		CalcAtkMods02( w_SkillMod, 0 );
@@ -3362,7 +3385,7 @@ function CalcSkillDamage()
 		n_PerHIT_DMG = 0;
 		n_A_Weapon_element = ele_NEUTRAL;
 		damageType = kDmgTypeMagic;
-		w_TotalHits = 2 * n_Delay[ksDelaySkillDuration] + 1;
+		w_TotalHits = 2 * (n_A_ActiveSkillLV + 4);
 		w_DMG[2] = 500 + 100 * n_A_ActiveSkillLV;
 
 		w_DMG[2] = Math.floor(w_DMG[2]);
@@ -3385,7 +3408,7 @@ function CalcSkillDamage()
 		fixedCastTime *= 5.0;
 		variableCastTime *= 0.0;
 		n_Delay[ksDelayGlobal] = 2.0;
-		n_Delay[ksDelaySkillDuration] = 9.0;
+		n_Delay[ksDelaySkillDuration] = 4 + n_A_ActiveSkillLV;
 	}
 	else if ( n_A_ActiveSkill === skill_SOR_VARETYR_SPEAR )
 	{
@@ -3498,7 +3521,7 @@ function CalcSkillDamage()
 		n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 4.5 + 0.5 * n_A_ActiveSkillLV;
 	}
-	else if ( n_A_ActiveSkill === skill_RUN_DRAGON_BREATH )
+	else if ( n_A_ActiveSkill === skill_RUN_DRAGON_BREATH  || n_A_ActiveSkill === skill_RUN_DRAGON_BREATH_WATER)
 	{ // Dragon Breath
 	
 		// Local variables
@@ -3518,7 +3541,12 @@ function CalcSkillDamage()
 			formElements["SkillSubNum"].value = 1;
 		}
 		w_HIT_HYOUJI = 100;
-		n_A_Weapon_element = ele_FIRE;
+		if (n_A_ActiveSkill === skill_RUN_DRAGON_BREATH) {
+		    n_A_Weapon_element = ele_FIRE;
+		} else if (n_A_ActiveSkill === skill_RUN_DRAGON_BREATH_WATER) {
+		    n_A_Weapon_element = ele_WATER;
+		}
+		
 		CalcElementalMod( n_A_Weapon_element );
 		
 		// Elemental Mod for fire element
@@ -4061,6 +4089,36 @@ function CalcSkillDamage()
 		variableCastTime *= 0.0;
 		n_Delay[ksDelayGlobal] = 1.0;
 		n_Delay[ksDelayCooldown] = 5.0;
+	}
+	else if(n_A_ActiveSkill==skill_MEC_LAVA_FLOW)
+	{
+		n_PerHIT_DMG = 0;
+		n_A_Weapon_element = ele_FIRE;
+		damageType = kDmgTypeMelee;
+		w_TotalHits = 5;
+		w_DMG[2] = 1200 + 400 * n_A_ActiveSkillLV;
+
+		w_DMG[2] = Math.floor(w_DMG[2]);
+
+		if(n_B[en_BOSS] == 5)
+			w_DMG[2] = 1;
+		w_DMG[0] = w_DMG[1] = w_DMG[2];
+		for ( var i = 0; i < 3; i++ )
+		{
+			Last_DMG_A[i] = Last_DMG_B[i] = w_DMG[i] * w_TotalHits;
+			w_DMG[i] = Last_DMG_A[i]
+		}
+		var wStrG = Last_DMG_A[0] +" ("+ (w_DMG[0] / w_TotalHits) +" x "+ w_TotalHits +"hit)"
+		for ( var i = 0; i < 3; i++ )
+		{
+			InnStr[i] += wStrG;
+		}
+		w_HIT_HYOUJI = 100;
+		
+		fixedCastTime *= 5.0;
+		variableCastTime *= 0.0;
+		n_Delay[ksDelayGlobal] = 2.0;
+		n_Delay[ksDelaySkillDuration] = 4 + n_A_ActiveSkillLV;
 	}
 	// Magic Skills ----------------------------------
 	else

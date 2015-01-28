@@ -976,6 +976,17 @@ function tPlusDamCut( damage )
 		{ // Lex Aeterna
 			damage *= 2;
 		}
+		if (monsterDebuffs[status_en_DARK_CLAW] > 0 && 
+			(n_A_WeaponType != weapTyp_BOW &&
+			n_A_WeaponType != weapTyp_INSTRU &&
+			n_A_WeaponType != weapTyp_WHIP &&
+			n_A_WeaponType != weapTyp_HANDGUN &&
+			n_A_WeaponType != weapTyp_RIFLE &&
+			n_A_WeaponType != weapTyp_SHOTGUN &&
+			n_A_WeaponType != weapTyp_GATLING_GUN &&
+			n_A_WeaponType != weapTyp_GRENADE_LAUNCHER)) {
+		    damage *= 1 + (0.3 * monsterDebuffs[status_en_DARK_CLAW]);
+		}
 		if ( monsterDebuffs[status_en_FIBER] && n_A_Weapon_element === ele_FIRE )
 		{ // Fiberlock
 			damage *= 2;
@@ -1264,7 +1275,7 @@ function DisplayCastAndDelay()
 	{
 		n_Delay[ksDelayE] = parseInt(formElements["Conf01"].value) / 100;
 	}
-	if ( n_Delay[ksDelayE] > ( totalDelay + totalCastTime ) )
+	if ( n_Delay[ksDelayE] > ( totalDelay + totalCastTime ) ) //Check here later
 	{
 		totalDelay = n_Delay[ksDelayE] - totalCastTime;
 		longestDelay = ksDelayE;
@@ -1274,7 +1285,7 @@ function DisplayCastAndDelay()
 		totalDelay = n_Delay[ksDelayF];
 		longestDelay = ksDelayF;
 	}
-	if ( n_Delay[ksDelaySkillDuration] > ( totalDelay + totalCastTime ) )
+	if ( n_Delay[ksDelaySkillDuration] > totalDelay )
 	{
 		totalDelay = n_Delay[ksDelaySkillDuration] - totalCastTime;
 		longestDelay = ksDelaySkillDuration;
@@ -1344,7 +1355,7 @@ function DisplayCastAndDelay()
 	else if ( longestDelay == ksDelaySkillDuration )
 	{
 		strSUB2name += "<font size=2>Delay (Skill-Duration)</font></br>";
-		strSUB2 += totalDelay.toFixed(1) + " sec</br>";
+		strSUB2 += n_Delay[ksDelaySkillDuration].toFixed(1) + " sec</br>";
 	}
 	else if ( longestDelay == ksDelayCooldown )
 	{ // skill cooldown

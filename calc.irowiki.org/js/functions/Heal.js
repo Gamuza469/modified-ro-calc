@@ -141,6 +141,10 @@ function CalcBaseHeal( HealLv, maxHeal )
 		healMultiplier += Math.floor(n_A_HEAD_DEF_PLUS/2);
 	}
 	
+	if (SkillSearch(skill_ABI_OFFERTORIUM)) {
+	    healMultiplier += 30 * SkillSearch(skill_ABI_OFFERTORIUM);
+	}
+	
 	
 	// Apply Multiplier
 	wHeal = Math.floor( wHeal * healMultiplier / 100 );

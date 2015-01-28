@@ -1982,8 +1982,8 @@ with(document.calcForm)
 		str += '<td id="MarshOfAbyssInput" class="bgLtRow2 padded optArea"></td>';
 		str += '<td id="GloomyDayLabel" class="bgLtRow4 padded optCaption"></td>';
 		str += '<td id="GloomyDayInput" class="bgLtRow2 padded optArea"></td>';
-		str += '<td class="bgLtRow4 padded optCaption"></td>';
-		str += '<td class="bgLtRow2 padded optArea"></td>';
+		str += '<td id="DarkClawLabel"class="bgLtRow4 padded optCaption"></td>';
+		str += '<td id="DarkClawInput" class="bgLtRow2 padded optArea"></td>';
 	}
 	else
 	{
@@ -2026,6 +2026,7 @@ with(document.calcForm)
 	w_name[26] = AilmentsOBJ[13][Language]; // Venom Impress
 	w_name[27] = AilmentsOBJ[14][Language]; // Marsh of Abyss
 	w_name[28] = AilmentsOBJ[17][Language]; // Gloomy Day
+	w_name[29] = AilmentsOBJ[18][Language]; // Dark Claw
 	for ( var i = 0; i <= 20; i++ )
 	{
 		myInnerHtml( "BI" + i + "_1", w_name[i], 0 );
@@ -2042,6 +2043,7 @@ with(document.calcForm)
 	myInnerHtml( "venomImpressLabel", w_name[26], 0 );
 	myInnerHtml( "MarshOfAbyssLabel", w_name[27], 0 );
 	myInnerHtml( "GloomyDayLabel", w_name[28], 0 );
+	myInnerHtml( "DarkClawLabel", w_name[29], 0 );
 	
 	// Build the selection options
 	var html_SKILL = new Array();
@@ -2071,6 +2073,7 @@ with(document.calcForm)
 	html_SKILL[26] = '<select name="VenomImpress" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
 	html_SKILL[27] = '<select name="MarshOfAbyss" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
 	html_SKILL[28] = '<select name="GloomyDay" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>';
+	html_SKILL[29] = '<select name="DarkClaw" style="width:50px;" onchange="ToggleMonsterDebuff()"></select>'
 	for ( var i = 0; i <= 20; i++ )
 	{
 		myInnerHtml("BI"+i+"_2",html_SKILL[i],0);
@@ -2080,6 +2083,7 @@ with(document.calcForm)
 	myInnerHtml("venomImpressInput",html_SKILL[26],0);
 	myInnerHtml("MarshOfAbyssInput",html_SKILL[27],0);
 	myInnerHtml("GloomyDayInput",html_SKILL[28],0);
+	myInnerHtml("DarkClawInput", html_SKILL[29],0);
 
 	// Build options for 10 level skills
 	for ( var i = 0; i <= 10; i++ )
@@ -2118,6 +2122,7 @@ with(document.calcForm)
 		VenomImpress.options[i] = new Option( off, i );
 		MarshOfAbyss.options[i] = new Option( off, i );
 		GloomyDay.options[i] = new Option( off, i );
+		DarkClaw.options[i] = new Option( off, i );
 	}
 	
 	// PvM Debuffs

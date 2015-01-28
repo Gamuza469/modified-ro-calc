@@ -525,6 +525,14 @@ function CalcMagicDamage( rawDamage )
 		wX += SkillSearch( skill_SA_DRAGONOLOGY ) * 2;
 	}
 	
+	if (SkillSearch(skill_WAR_INTENSE_TELEKINESIS) && 
+		(n_A_ActiveSkill === skill_MA_NAPALM_BEAT ||
+		n_A_ActiveSkill === skill_MA_SOUL_STRIKE ||
+		n_A_ActiveSkill === skill_HW_NAPALM_VULCAN ||
+		n_A_ActiveSkill === skill_WAR_SOUL_EXPANSION)) {
+	    wX += 40 * SkillSearch(skill_WAR_INTENSE_TELEKINESIS);
+	}
+	
 	wBMC2 = wBMC2 * ( 100 + wX ) / 100;
 
 	wBMC2 = tPlusDamCut( wBMC2 );

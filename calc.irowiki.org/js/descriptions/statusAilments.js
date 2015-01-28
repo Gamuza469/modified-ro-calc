@@ -4,11 +4,11 @@ AilmentsOBJ = [
 ,["","Stun"]
 ,["","Freeze"]
 ,["","Curse"]
-,["—","Blind"]
+,["ï¿½","Blind"]
 ,["","Sleep"]
-,["ˆž","Silence"]
+,["ï¿½ï¿½","Silence"]
 ,["","Chaos"]
-,["ˆ","Bleeding"]
+,["ï¿½","Bleeding"]
 ,["","Stone"]
 ,["","Weapon Break"]
 ,["","Armor Break"]
@@ -18,5 +18,6 @@ AilmentsOBJ = [
 ,["","Burning"]
 ,["","Cristallization"]
 ,["","Gloomy Day"]
+,["","Dark Claw"]
 ];
 }

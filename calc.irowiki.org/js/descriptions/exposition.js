@@ -10,7 +10,7 @@ EXTENDED_INFO_NAME = [
 ,[7,"","Status Resistance"]
 ,[8,"","Others Resistance"]
 ,[9,"","Cast and Delay"]
-,[10,"","Experience Calc"]
+,[10,"","Experience Calculator (slow!)"]
 ];
 }
 
@@ -80,7 +80,7 @@ WordData = [
 ,["","MDEF"]
 ,["","HIT"]
 ,["","FLEE"]
-,["Œ","Perfect Dodge"]//20
+,["ï¿½","Perfect Dodge"]//20
 ,["","Critical"]
 ,["","MATK"]
 ,["","ASPD"]
@@ -122,7 +122,7 @@ WordData = [
 ,["","Minimum Number of Hits"]
 ,["","Average Number of Hits"]//60
 ,["","Maximum Number of Hits"]
-,["“•","Average Battle Duration"]
+,["ï¿½ï¿½","Average Battle Duration"]
 ,["","Base Exp Per Hit"]
 ,["","Job Exp Per Hit"]
 ,["","Average Damage Recieved"]
@@ -157,8 +157,8 @@ WordData = [
 ,["","Card Weight: "]
 ,["","Number of Hits: "]//95
 ,["","Poison React Level: "]
-,["‹","Remaining SP: "]
-,["‹","Remaining HP: "]
+,["ï¿½","Remaining SP: "]
+,["ï¿½","Remaining HP: "]
 ,["","Number of Hits(Average): "]
 ,["","Cell to Enemy: "]//100
 ,["","Andrenaline Rush"]
@@ -205,8 +205,8 @@ WordData = [
 ,["","Not Available for this Class"]
 ,["","Current Base Exp"]
 ,["","Current Job Exp"]
-,["‘","Regen"]//145
-,["‘","Weight Limit"]
+,["ï¿½","Regen"]//145
+,["ï¿½","Weight Limit"]
 ,["","Total Weight of Equipment"]
 ,["","Status minus Resistance"]
 ,["","(This system is in testing)"]
@@ -215,7 +215,7 @@ WordData = [
 ,["","Nomal Monster"]
 ,[""," Resistance"]
 ,["","Cast Time"]
-,["“•","After Cast Delay"]//155
+,["ï¿½ï¿½","After Cast Delay"]//155
 ,["","Next Base Level up: "]
 ,["","Next Job Level up: "]
 ,[""," need "]
@@ -228,7 +228,7 @@ WordData = [
 ,["","Save"]//165
 ,["","Save URL"]
 ,["","Calculate"]
-,["–","Delete Save Data"]
+,["ï¿½","Delete Save Data"]
 ,["","All Stats"]
 ,["","ASPD"]//170
 ,["","CRIT"]
@@ -241,7 +241,7 @@ WordData = [
 ,["","Ranged damage"]
 ,["","Boss"]
 ,[""," size monsters"]//180
-,["‹"," type monsters"]
+,["ï¿½"," type monsters"]
 ,[""," element monsters"]
 ,["","Damage on "]
 ,["","Resistance to "]
@@ -263,9 +263,9 @@ WordData = [
 ,["",""]//200
 ,["","(Staff Type)"]
 ,["","[Crit] on "]
-,["‹"," type monsters "]
+,["ï¿½"," type monsters "]
 ,["","Experience from "]
-,["‹"," type monsters "]//205
+,["ï¿½"," type monsters "]//205
 ,["","When attacking, adds a "]
 ,["","% chance to inflict ["]
 ,["","] on the enemy"]

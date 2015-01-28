@@ -57,6 +57,7 @@ with( document.calcForm )
 		monsterDebuffs[status_en_VENOM_IMPRESS] = parseInt(formElements["VenomImpress"].value);
 		monsterDebuffs[status_en_MARSH_OF_ABYSS] = parseInt(formElements["MarshOfAbyss"].value);
 		monsterDebuffs[status_en_GLOOMY_DAY] = parseInt(formElements["GloomyDay"].value);
+		monsterDebuffs[status_en_DARK_CLAW] = parseInt(formElements["DarkClaw"].value);
 	}
 	
 	{ // Monster Buffs

@@ -794,6 +794,7 @@ function CalcExtendedInfo()
 		var NowBaseExp = eval(document.calcForm.A_KakutyouSelNum.value);
 		var NowJobExp = eval(document.calcForm.A_KakutyouSelNum2.value);
 		var JobType=0; // Novi
+		var MaxBaseLV = 0;
 		if(n_A_JOB == cls_HNOV)
 			JobType = 1; // HNovi
 		if((1 <= n_A_JOB && n_A_JOB <= 6) || n_A_JOB == 41 || n_A_JOB == 20)
@@ -811,6 +812,13 @@ function CalcExtendedInfo()
 		else if(46 <= n_A_JOB && n_A_JOB <= 73)
 			JobType = 8; // 3rd Cls
 		
+		if (n_A_JOB >= 0 && n_A_JOB <= 45)
+			MaxBaseLV = CONST_MAXLVL;
+		if (n_A_JOB >= 46 && n_A_JOB <= 71)
+			MaxBaseLV = CONST_MAXLVL_THIRD;
+		if (n_A_JOB >= 72)
+			MaxBaseLV = CONST_MAXLVL_KAGOB_ENOVI;
+		
 		NowBaseExp = Math.floor(PC_BaseExp[rebirthClass][n_A_BaseLV] * NowBaseExp / 100);
 
 		var wkk11;
@@ -820,7 +828,7 @@ function CalcExtendedInfo()
 		var OneCheck = 0;
 		if ( n_B[en_BASEEXP] !== 0 )
 		{
-			for ( var i = n_A_BaseLV; i < CONST_MAXLVL && JobType != 8; i++ )
+			for ( var i = n_A_BaseLV; i < MaxBaseLV; i++ )
 			{
 				var LvUpExp = PC_BaseExp[rebirthClass][i];
 				
@@ -847,38 +855,7 @@ function CalcExtendedInfo()
 				}
 			}
 			
-			if ( JobType !== 8 )
-			{
-				wkk11 += "To reach Base Lv.99 you need to kill <B> "+ Kanma(MonsterNum) +"</B> " + n_B[en_CLASS] +GetWord(159)+".<BR>";
-			}
-			
-			for ( var i = n_A_BaseLV; i < CONST_MAXLVL_THIRD && JobType === 8; i++ )
-			{
-				var LvUpExp = PC_BaseExp[rebirthClass][i];
-				
-				var w1 = Math.floor((LvUpExp - NowBaseExp) / n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]));
-				MonsterNum += w1;
-				NowBaseExp += w1 * n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
-
-				while(NowBaseExp < LvUpExp)
-				{
-					NowBaseExp += n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
-					MonsterNum += 1
-				}
-				
-				if(OneCheck==0)
-				{
-					OneCheck = 1;
-					wkk11 += "You need to kill <B>" +Kanma(MonsterNum) + " " + n_B[en_CLASS] + " </B> to level up.<br/>";
-				}
-				
-				NowBaseExp -= LvUpExp;
-				if(NowBaseExp > LvUpExp -1)
-					NowBaseExp = LvUpExp -1;
-			}
-			if (JobType === 8)
-				wkk11 += "To reach Base Lv.175 you need to kill <B> "+ Kanma(MonsterNum) +"</B> " + n_B[en_CLASS] + GetWord(159)+".<BR>";
-			//wkk11 += "Until BaseLv99: <B>"+ Kanma(MonsterNum) +"</B> more "+ n_B[1] +" kill"+(Kanma(MonsterNum)!=1?"s":"")+"<BR><BR>";
+			wkk11 += "To reach Base Lv." + MaxBaseLV + " you need to kill <B> "+ Kanma(MonsterNum) +"</B> " + n_B[en_CLASS] +GetWord(159)+".<BR>";
 		}
 
 		NowJobExp = Math.floor(PC_JobExp[JobType][n_A_JobLV] * NowJobExp / 100);
@@ -1535,7 +1512,7 @@ with(document.calcForm)
 		}
 		SkillSubNum.value = 5;
 	}
-	else if ( n_A_ActiveSkill === skill_RUN_DRAGON_BREATH )
+	else if ( n_A_ActiveSkill === skill_RUN_DRAGON_BREATH || n_A_ActiveSkill === skill_RUN_DRAGON_BREATH_WATER)
 	{
 		myInnerHtml("AASkillName","<br/>Remaining HP:",0);
 		myInnerHtml("AASkill",'<input type="text" name="SkillSubNum" size=6 onchange="calc()">',0);

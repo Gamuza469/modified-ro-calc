@@ -70,7 +70,7 @@ WordData = [
 ,["","AGI"]
 ,["","VIT"]
 ,["","INT"]
-,["","DEX"]//10
+,["","DEX"] //10
 ,["","LUK"]
 ,["","Remaining Status Points"]
 ,["","Extended Info"]
@@ -80,7 +80,7 @@ WordData = [
 ,["","MDEF"]
 ,["","HIT"]
 ,["","FLEE"]
-,["ï¿½","Perfect Dodge"]//20
+,["ï¿?","Perfect Dodge"]//20
 ,["","Critical"]
 ,["","MATK"]
 ,["","ASPD"]
@@ -157,8 +157,8 @@ WordData = [
 ,["","Card Weight: "]
 ,["","Number of Hits: "]//95
 ,["","Poison React Level: "]
-,["ï¿½","Remaining SP: "]
-,["ï¿½","Remaining HP: "]
+,["ï¿?","Remaining SP: "]
+,["ï¿?","Remaining HP: "]
 ,["","Number of Hits(Average): "]
 ,["","Cell to Enemy: "]//100
 ,["","Andrenaline Rush"]
@@ -205,8 +205,8 @@ WordData = [
 ,["","Not Available for this Class"]
 ,["","Current Base Exp"]
 ,["","Current Job Exp"]
-,["ï¿½","Regen"]//145
-,["ï¿½","Weight Limit"]
+,["ï¿?","Regen"]//145
+,["ï¿?","Weight Limit"]
 ,["","Total Weight of Equipment"]
 ,["","Status minus Resistance"]
 ,["","(This system is in testing)"]
@@ -228,7 +228,7 @@ WordData = [
 ,["","Save"]//165
 ,["","Save URL"]
 ,["","Calculate"]
-,["ï¿½","Delete Save Data"]
+,["ï¿?","Delete Save Data"]
 ,["","All Stats"]
 ,["","ASPD"]//170
 ,["","CRIT"]
@@ -241,7 +241,7 @@ WordData = [
 ,["","Ranged damage"]
 ,["","Boss"]
 ,[""," size monsters"]//180
-,["ï¿½"," type monsters"]
+,["ï¿?"," type monsters"]
 ,[""," element monsters"]
 ,["","Damage on "]
 ,["","Resistance to "]
@@ -263,9 +263,9 @@ WordData = [
 ,["",""]//200
 ,["","(Staff Type)"]
 ,["","[Crit] on "]
-,["ï¿½"," type monsters "]
+,["ï¿?"," type monsters "]
 ,["","Experience from "]
-,["ï¿½"," type monsters "]//205
+,["ï¿?"," type monsters "]//205
 ,["","When attacking, adds a "]
 ,["","% chance to inflict ["]
 ,["","] on the enemy"]

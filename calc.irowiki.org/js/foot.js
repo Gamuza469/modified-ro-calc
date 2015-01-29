@@ -330,7 +330,8 @@ with ( document.calcForm )
 		otherBuffs[ksAloe] = formElements["aloe"].checked;
 		otherBuffs[ksResistantSouls] = parseInt(formElements["resistantSouls"].value);
 		//otherBuffs[ksStriking] = parseInt(formElements["striking"].value);
-		//otherBuffs[ksOdinsPower] = parseInt(formElements["odinsPower"].value);
+		otherBuffs[ksOdinsPower] = parseInt(formElements["odinsPower"].value);
+		//otherBuffs[ksFriggsSong] = parseInt(formElements["friggsSong"].value);
 	}
 
 	{ // Misc Effects
@@ -1303,6 +1304,16 @@ function StPlusCalc()
 	n_A_INT += wSPC_INT;
 	n_A_DEX += wSPC_DEX;
 	n_A_LUK += wSPC_LUK;
+	
+	// Full Throttle
+	if (SkillSearch(skill_3RD_FULL_THROTTLE)) {
+	    wSPC_STR += Math.floor(n_A_STR * 0.2);
+	    wSPC_AGI += Math.floor(n_A_AGI * 0.2);
+	    wSPC_VIT += Math.floor(n_A_VIT * 0.2);
+	    wSPC_INT += Math.floor(n_A_INT * 0.2);
+	    wSPC_DEX += Math.floor(n_A_DEX * 0.2);
+	    wSPC_LUK += Math.floor(n_A_LUK * 0.2);
+	}
 
 	// Display Stats
 	if(wSPC_STR >= 0)

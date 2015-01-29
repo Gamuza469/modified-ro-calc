@@ -1559,6 +1559,13 @@ with(document.calcForm)
 	str += '<td id="EN613_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN614_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN614_2" class="bgLtRow1 padded optArea"></td>';
+	/*str += '</tr><tr>';
+	str += '<td id="EN615_1" class="bgLtRow3 padded optCaption"></td>';
+	str += '<td id="EN615_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="EN616_1" class="bgLtRow3 padded optCaption"></td>';
+	str += '<td id="EN616_2" class="bgLtRow1 padded optArea"></td>';
+	str += '<td id="EN617_1" class="bgLtRow3 padded optCaption"></td>';
+	str += '<td id="EN617_2" class="bgLtRow1 padded optArea"></td>';*/
 	str += '</tr></table>';
 	myInnerHtml("OtherBuffs",str,0);
 
@@ -1634,6 +1641,10 @@ with(document.calcForm)
 	myInnerHtml( "EN614_1", SKILL_NAME[721][Language], 0 );
 	myInnerHtml( "EN614_2", '<select name="odinsPower" style="width:50px;" onchange="ToggleOtherBuffs()"></select>', 0 );
 	
+	// Frigg's Song
+	//myInnerHtml( "EN615_1", SKILL_NAME[741][Language], 0 );
+	//myInnerHtml( "EN615_2", '<select name="friggsSong" style="width:50px;" onchange="ToggleOtherBuffs()"></select>', 0 );
+	
 	for ( var i = 0; i <= 10; i++ )
 	{ // lvl10 skills
 		var off = '0';
@@ -1667,6 +1678,7 @@ with(document.calcForm)
 		powerThrust.options[i] = new Option( off, i ); // PowThrust
 		resistantSouls.options[i] = new Option( off, i ); // ResiSouls
 		striking.options[i] = new Option( off, i ); // Striking
+		//friggsSong.options[i] = new Option( i , i ); //Frigg's Song
 	}
 	for ( var i = 0; i <= 2; i++ )
 	{ // lvl2 skills

@@ -976,7 +976,7 @@ function tPlusDamCut( damage )
 		{ // Lex Aeterna
 			damage *= 2;
 		}
-		if (monsterDebuffs[status_en_DARK_CLAW] > 0 && 
+		if (monsterDebuffs[status_en_DARK_CLAW] > 0 && n_B[en_BOSS] == 0 &&
 			(n_A_WeaponType != weapTyp_BOW &&
 			n_A_WeaponType != weapTyp_INSTRU &&
 			n_A_WeaponType != weapTyp_WHIP &&

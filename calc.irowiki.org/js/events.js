@@ -207,8 +207,8 @@ function PrepExtenededInfo()
 	else if ( wKK === 10 )
 	{
 		var w;
-		w = '<Font size="2">'+ GetWord(143) +'<input type="text" name="A_KakutyouSelNum" value="0" size=4 onChange="StAllCalc()" style="text-align : right;">%<BR>';
-		w += GetWord(144) +'<input type="text" name="A_KakutyouSelNum2" value="0" size=4 onChange="StAllCalc()" style="text-align : right;">%<BR></Font>';
+		w = '<Font size="2">'+ GetWord(143) +'&nbsp;<input type="text" name="A_KakutyouSelNum" value="0" size=4 onChange="CalcExtendedInfo()" style="text-align : right;">%<BR>';
+		w += GetWord(144) +'&nbsp;<input type="text" name="A_KakutyouSelNum2" value="0" size=4 onChange="CalcExtendedInfo()" style="text-align : right;">%<BR></Font><hr>';
 		myInnerHtml("A_KakutyouSel",w,0);
 	}
 	
@@ -791,8 +791,8 @@ function CalcExtendedInfo()
 	}
 	else if ( wKK == 10 )
 	{ // Experience
-		var NowBaseExp = eval(document.calcForm.A_KakutyouSelNum.value);
-		var NowJobExp = eval(document.calcForm.A_KakutyouSelNum2.value);
+		var NowBaseExp = !isNaN(document.calcForm.A_KakutyouSelNum.value) ? document.calcForm.A_KakutyouSelNum.value : 0;
+		var NowJobExp = !isNaN(document.calcForm.A_KakutyouSelNum2.value) ? document.calcForm.A_KakutyouSelNum2.value : 0;
 		var JobType=0; // Novi
 		var MaxBaseLV = 0;
 		if(n_A_JOB == cls_HNOV)
@@ -831,16 +831,28 @@ function CalcExtendedInfo()
 			for ( var i = n_A_BaseLV; i < MaxBaseLV; i++ )
 			{
 				var LvUpExp = PC_BaseExp[rebirthClass][i];
+				var expDiff = LvUpExp - NowBaseExp;
+				var monsterExpWithLvlMod = n_B[en_BASEEXP]; //EXP is already modded
+				var w1;
 				
-				var w1 = Math.floor((LvUpExp - NowBaseExp) / n_B[en_BASEEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]));
-				MonsterNum += w1;
-				NowBaseExp += w1 * n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
-
-				while ( NowBaseExp < LvUpExp )
-				{
-					NowBaseExp += n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
-					MonsterNum += 1
+				if (expDiff / monsterExpWithLvlMod >= 1) { //If monsterEXP is greater than needed EXP then force 1, otherwise calc
+				    w1 = Math.floor( expDiff / monsterExpWithLvlMod );
+				
+				    if ((expDiff / monsterExpWithLvlMod) - Math.floor(expDiff / monsterExpWithLvlMod) > 0) { //If there's overflowing EXP, count 1 more
+					w1++;
+				    }
+				} else {
+				    w1 = 1;
 				}
+				
+				MonsterNum += w1;
+				NowBaseExp += w1 * monsterExpWithLvlMod;
+
+//				while ( NowBaseExp < LvUpExp )
+//				{
+//					NowBaseExp += n_B[en_BASEEXP];// * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL]);
+//					MonsterNum += 1
+//				}
 				
 				if ( OneCheck === 0 ) //For the current level
 				{
@@ -889,19 +901,32 @@ function CalcExtendedInfo()
 			for(i=n_A_JobLV;i<MaxJobLV;i++)
 			{
 				var LvUpExp = PC_JobExp[JobType][i];
+				var jExpDiff = LvUpExp - NowJobExp;
+				var monsterJExpWithLvlMod = n_B[en_JOBEXP];
 				/*var expReal = Math.floor(n_B[en_JOBEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL])) + ((n_B[en_JOBEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_LEVEL])) % expReal != 0 ? 1 : 0);
 				var w1 = Math.floor((LvUpExp - NowJobExp) / expReal) + ((LvUpExp - NowJobExp) % expReal != 0 ? 1 : 0);*/
-				var w1 = Math.floor((LvUpExp - NowJobExp) / n_B[en_JOBEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_JOBEXP]));
+				//var w1 = Math.floor((LvUpExp - NowJobExp) / n_B[en_JOBEXP] * expModByLevelDiff(n_A_BaseLV,n_B[en_JOBEXP]));
+				var w1;
+				
+				if (jExpDiff / monsterJExpWithLvlMod >= 1) {
+				    w1 = Math.floor( jExpDiff / monsterJExpWithLvlMod );
+				
+				    if ((jExpDiff / monsterJExpWithLvlMod) - Math.floor(jExpDiff / monsterJExpWithLvlMod) > 0) {
+					w1++;
+				    }
+				} else {
+				    w1 = 1;
+				}
 				
 				MonsterNum += w1;
-				NowJobExp += w1;
+				NowBaseExp += w1 * monsterJExpWithLvlMod;
 				//var b = Math.floor((LvUpExp - NowJobExp) / (a*1.0));
 				//NowJobExp += b*a;
-				while(NowJobExp < LvUpExp)
+				/*while(NowJobExp < LvUpExp)
 				{
 					NowJobExp += n_B[en_JOBEXP];
 					MonsterNum += 1
-				}
+				}*/
 				//MonsterNum += b;
 				if(OneCheck === 0)
 				{
@@ -920,7 +945,7 @@ function CalcExtendedInfo()
 
 		wkk11 += "</Font>";
 
-		myInnerHtml( "A_KakutyouSel", "", 0 );
+		//myInnerHtml( "A_KakutyouSel", "", 0 );
 		myInnerHtml( "A_KakutyouData", wkk11, 0 );
 	}
 }

@@ -135,7 +135,7 @@ function CalcBaseHeal( HealLv, maxHeal )
 		healMultiplier += (n_A_HEAD_DEF_PLUS-6);
 	}
 	
-	if ( CardNumSearch( 534 ))
+	if ( CardNumSearch(card_HEAD_PARUS))
 	{ // Parus Card
 		if(n_A_JobSearch()==cls_ACO)
 		healMultiplier += Math.floor(n_A_HEAD_DEF_PLUS/2);

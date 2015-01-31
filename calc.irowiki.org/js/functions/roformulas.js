@@ -1438,7 +1438,7 @@ function calcHP()
 	if(n_A_BODY_DEF_PLUS >= 9 && CardNumSearch(225)) // Apocalypse
 		additiveHP += 800;
 	if(n_A_JobSearch()==cls_MAG) // MageCls
-		additiveHP += CardNumSearch(474) * -100; // Banshee
+		additiveHP += CardNumSearch(card_HEAD_BANSHEE) * -100; // Banshee
 	if(n_A_JobSearch()==cls_SWO) // SwordsCls
 		additiveHP += 500 * CardNumSearch(477); // Echio
 
@@ -1544,7 +1544,7 @@ function calcHP()
 	{ // FireLockSoldier
 		hpMultiplier += 10;
 	}
-	if(CardNumSearch(405))
+	if(CardNumSearch(card_GRMT_ALIOT))
 	{ // Aliot
 		if ( n_A_JobSearch() == cls_SWO ||
 			 n_A_JobSearch() == cls_THI ||
@@ -1838,7 +1838,7 @@ function calcSP( n_A_MaxSP )
 	// Cards
 	if(n_A_JobSearch()==cls_MAG)
 	{ // MageCls
-		w += 100 * CardNumSearch(474); // Banshee
+		w += 100 * CardNumSearch(card_HEAD_BANSHEE); // Banshee
 		w += 100 * CardNumSearch(476); // Agav
 	}
 	if(n_A_HEAD_DEF_PLUS <= 4 && n_A_card[card_loc_HEAD_UPPER]==179) // Blue Acidus
@@ -2730,7 +2730,7 @@ function calcCrit( n_A_CRI )
 		n_A_CRI += 3;
 	if(n_A_JobSearch()==cls_THI)
 		n_A_CRI += 4 * CardNumSearch(328); // Mobster
-	if(CardNumSearch(402)) // GreenMaiden
+	if(CardNumSearch(card_GRMT_GREENMAIDEN)) // GreenMaiden
 		n_A_CRI += n_A_SHOULDER_DEF_PLUS;
 	if(n_A_WeaponType==weapTyp_SWORDII || n_A_WeaponType==weapTyp_SWORD)
 		n_A_CRI += CardNumSearch(464) * 5; // SwordGuardian

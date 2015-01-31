@@ -32,6 +32,7 @@
 		<script type="text/javascript" src="js/descriptions/weaponTypes.js"></script>
 		<!--tables-->
 		<script type="text/javascript" src="js/tables/defines.js"></script>
+		<script type="text/javascript" src="js/tables/defineItem.js"></script>
 		<script type="text/javascript" src="js/tables/attackSpeedNew.js"></script>
 		<script type="text/javascript" src="js/tables/attackSpeedOld.js"></script>
 		<script type="text/javascript" src="js/tables/baseExperience.js"></script>
@@ -95,7 +96,16 @@
 	            <table class="bgLtTable aligned">
 	            	<tbody><tr>
 	            		<td class="bgLtRow3 padded optCaption">
-					01/31/2015:
+					02/XX/2015:
+					    <ul style="margin-left: 5px;">
+						<li>Dark Claw debuff now only applies on non-Boss monsters.</li>
+						<li>Fixed the speed issue with the Experience Calculator.</li>
+						<li>Re-implemented current EXP/jEXP inputs to the Experience Calculator.</li>
+						<li>Changed internally the way the cards are identified.</li>
+						<li>Re-ordered the Pet list.</li>
+					    </ul>
+					01/30/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150130').toggle()">
+					<span style="display: none;" id="note20150130">
 					    <ul style="margin-left: 5px;">
 						<li>Updated the HP/SP tables for 3rd Jobs up to Lv.175 and Kagerou/Oboro up to Lv.160 with current iRO values.</li>
 						<li>Implemented new 3rd Job skills.</li>
@@ -113,7 +123,8 @@
 						<li>Fixed Gravitational Field formula and Odin's Power DEF/MDEF reduction.</li>
 						<li>Fixed some monster exclusive skills and added more skills to the list.</li>
 					    </ul>
-					    - Gamuza<br/><br/>
+					    - Gamuza<br/>
+					</span><br/>
 					01/24/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note2').toggle()">
 					<span style="display: none;" id="note2">
 					    <ul style="margin-left: 5px;">
@@ -366,7 +377,7 @@
 					            <tbody><tr>
 						            <td>
 							            <select name="ExtendedInfo" style="width:200px;" onchange="PrepExtenededInfo() | StAllCalc()">
-							            <option selected="selected" value="0">-</option><option value="1">Heal Amount</option><option value="2">Increased HP Recovery</option><option value="3">Increased SP Recovery</option><option value="4">Weight Limit</option><option value="5">Elemental Resistance</option><option value="6">Race Resistance</option><option value="7">Status Resistance</option><option value="8">Others Resistance</option><option value="9">Cast and Delay</option><option value="10">Experience Calculator (slow!)</option></select>
+							            <option selected="selected" value="0">-</option><option value="1">Heal Amount</option><option value="2">Increased HP Recovery</option><option value="3">Increased SP Recovery</option><option value="4">Weight Limit</option><option value="5">Elemental Resistance</option><option value="6">Race Resistance</option><option value="7">Status Resistance</option><option value="8">Others Resistance</option><option value="9">Cast and Delay</option><option value="10">Experience Calculator</option></select>
 						            </td>
 					            </tr>
 					            <tr>
@@ -424,10 +435,10 @@
 			    </tr>
 			</tbody>
 		    </table>
-		    <!--<table id="bigMDFKNTable" style="padding: 0; margin: 0">-->
+<!--		    <table id="bigMDFKNTable" style="padding: 0; margin: 0">
 			<tbody>
 			    <tr>
-				<td>
+				<td>-->
 				    <table>
 					<tbody>
 					    <tr>
@@ -689,10 +700,11 @@
 					    </tr>
 					</tbody>
 				    </table>
-				</td>
+<!--				</td>
 		            </tr>
 			    <tr>
-				<td>
+				<td style="width: 33%; vertical-align: top;"></td>
+				<td style="width: 66%; vertical-align: top;">-->
 				    <!--Additional Equip Boosts-->
 				    <div class="mdSeperator">&nbsp;</div>
 				    <div class="bgSmTitle smTitle">Additional Enchants&nbsp;-&nbsp;(Mora enchants, LVL4 weapons, custom ones)</div>
@@ -760,9 +772,9 @@
 					    </tr>
 					 </tbody>
 				    </table>
-				</td>
+<!--				</td>
 			    </tr>
-			</tbody>
+			</tbody>-->
 		    <!--</table>-->
                 </div>
 	            

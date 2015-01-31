@@ -453,11 +453,11 @@ with ( document.calcForm )
 	}
 	if ( n_A_WeaponType === weapTyp_STAFF )
 	{ // necromancer card
-		n_tok[bon_DEFIGN_RC_ALL] += 2 * CardNumSearch(466);
+		n_tok[bon_DEFIGN_RC_ALL] += 2 * CardNumSearch(card_WEPN_NECROMANCER);
 	}
-	if ( n_B[en_BOSS]==1 && CardNumSearch(425) )
+	if ( n_B[en_BOSS]==1 && CardNumSearch(card_HEAD_VESPER) )
 	{ // Vesper card
-		n_tok[297] += 30 * CardNumSearch(425);
+		n_tok[297] += 30 * CardNumSearch(card_HEAD_VESPER);
 	}
 	if ( EquipNumSearch(936) )
 	{ // Thorn Staff of Darkness
@@ -849,7 +849,7 @@ function StPlusCalc()
 		wSPC_AGI += Math.min(n_A_SHOES_DEF_PLUS-7, 1);
 		
 	if(n_A_WeaponType==weapTyp_ROD)
-		wSPC_INT += CardNumSearch(466);
+		wSPC_INT += CardNumSearch(card_WEPN_NECROMANCER);
 
 	wSPCall = StPlusCard(bon_ALL_STATS);
 	wSPC_STR += StPlusCard(bon_STR) + wSPCall;
@@ -861,21 +861,21 @@ function StPlusCalc()
 
 	
 	if(n_A_JobSearch()==cls_ACO)
-		wSPC_INT += CardNumSearch(383);
-	if(CardNumSearch(173)) wSPC_INT += n_A_LEFT_DEF_PLUS;
-	if(CardNumSearch(402)) wSPC_LUK += n_A_SHOULDER_DEF_PLUS;
-	if(CardNumSearch(406)) wSPC_AGI += n_A_SHOES_DEF_PLUS;
-	if(CardNumSearch(198)) wSPC_VIT += n_A_BODY_DEF_PLUS;
+		wSPC_INT += CardNumSearch(card_HEAD_RIDEWORD);
+	if(CardNumSearch(card_SHLD_DESPEROFTHAN)) wSPC_INT += n_A_LEFT_DEF_PLUS; //Despero of Thanatos
+	if(CardNumSearch(card_GRMT_GREENMAIDEN)) wSPC_LUK += n_A_SHOULDER_DEF_PLUS; //Green Maiden
+	if(CardNumSearch(card_FEET_ODIUMOFTHANA)) wSPC_AGI += n_A_SHOES_DEF_PLUS; //Odium of Thanatos
+	if(CardNumSearch(card_BODY_DIMIK)) wSPC_VIT += n_A_BODY_DEF_PLUS; //Dimik
 	if(n_A_card[card_loc_HEAD_UPPER] == 180) wSPC_STR += n_A_HEAD_DEF_PLUS;
 
-	if(CardNumSearch(185)) wSPC_VIT += Math.floor(SU_DEX /18);
-	if(CardNumSearch(187)) wSPC_STR += Math.floor(SU_INT /18);
-	if(CardNumSearch(189)) wSPC_LUK += Math.floor(SU_AGI /18);
-	if(CardNumSearch(191)) wSPC_AGI += Math.floor(SU_LUK /18);
-	if(CardNumSearch(196)) wSPC_INT += Math.floor(SU_STR /18);
-	if(CardNumSearch(197)) wSPC_DEX += Math.floor(SU_VIT /18);
+	if(CardNumSearch(card_BODY_OBSIDIAN)) wSPC_VIT += Math.floor(SU_DEX /18); //Obsidian
+	if(CardNumSearch(card_BODY_EGNIGEMCENIA)) wSPC_STR += Math.floor(SU_INT /18); //Egnigem
+	if(CardNumSearch(card_BODY_VENATU)) wSPC_LUK += Math.floor(SU_AGI /18); //Venatu
+	if(CardNumSearch(card_BODY_ANCIENTMIMIC)) wSPC_AGI += Math.floor(SU_LUK /18); //Ancient Mimic
+	if(CardNumSearch(card_BODY_MISTRESSOFSH)) wSPC_INT += Math.floor(SU_STR /18); //Mistress of Shelter
+	if(CardNumSearch(card_BODY_DAMEOFSENTIN)) wSPC_DEX += Math.floor(SU_VIT /18); //Dame of Sentinel
 	
-	if(CardNumSearch(405))
+	if(CardNumSearch(card_GRMT_ALIOT)) //Aliot
 	{ // Aliot
 		if(n_A_JobSearch()==cls_SWO || n_A_JobSearch()==cls_THI || n_A_JobSearch()==cls_MER)
 			wSPC_STR += 2;
@@ -1923,13 +1923,13 @@ function ActiveSkillSetPlus()
 			}
 		}
 	}
-	if(CardNumSearch(164) && (n_A_JOB == 9 || n_A_JOB == 23))
+	if(CardNumSearch(card_WEPN_LADYSOLAC) && (n_A_JOB == 9 || n_A_JOB == 23)) //Lady Solace
 	{
 		w_ASSP0[j] = 162;
 		w_ASSP9[j] = 2095;
 		j++;
 	}
-	if(CardNumSearch(277) && n_A_JobSearch()==1)
+	if(CardNumSearch(card_WEPN_GRYPHON) && n_A_JobSearch()==1) //Gryphon
 	{
 		w_ASSP0[j] = 76;
 		w_ASSP9[j] = 2096;

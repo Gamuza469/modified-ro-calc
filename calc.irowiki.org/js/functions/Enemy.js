@@ -490,9 +490,9 @@ with( document.calcForm )
 		var w2_Exp = 0;
 		if(EquipNumSearch(1030))
 			w1_Exp += 5 * EquipNumSearch(1030);
-		if(n_A_JobSearch()==3 && CardNumSearch(452) && (n_B[en_RACE]==1 || n_B[en_RACE]==6)) // RUndead
+		if(n_A_JobSearch()==3 && CardNumSearch(card_ISET_ACOLYTESET) && (n_B[en_RACE]==1 || n_B[en_RACE]==6)) // RUndead, Acolyte Card Set
 			w1_Exp += 5;
-		if(n_B[en_RACE] == 2 && n_A_JobSearch()==4 && CardNumSearch(453)) // RUndead
+		if(n_B[en_RACE] == 2 && n_A_JobSearch()==4 && CardNumSearch(card_ISET_ARCHERSET)) // RUndead, Archer Card Set
 			w1_Exp += 5;
 		if(battleEffects[pass_VIII_BAT_MANUAL])
 			w1_Exp += battleEffects[pass_VIII_BAT_MANUAL];

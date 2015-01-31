@@ -128,12 +128,12 @@ div.smTitle-centered{
 
 .entryNorm, .bgTabNorm{
 	background-color:#68B5D8;
-	background-image:url('../db.irowiki.org/style/tabnorm.png');
+	background-image:url('http://db.irowiki.org/style/tabnorm.png');
 	background-repeat:repeat-x;
 }
 .entrySel, .bgTabSel{
 	background-color:#88C4E0;
-	background-image:url('../db.irowiki.org/style/tabsel.png');
+	background-image:url('http://db.irowiki.org/style/tabsel.png');
 	background-repeat:repeat-x;
 }
 
@@ -150,17 +150,17 @@ table.tabMenu td.entryNorm, table.tabMenu td.entrySel{
 }
 table.tabMenu td.title{
 	background-color:#389DCC;
-	background-image:url('../db.irowiki.org/style/dksub.png');
+	background-image:url('http://db.irowiki.org/style/dksub.png');
 	background-repeat:repeat-x;
 }
 table.tabMenu td.entryNorm{
 	background-color:#68B5D8;
-	background-image:url('../db.irowiki.org/style/tabnorm.png');
+	background-image:url('http://db.irowiki.org/style/tabnorm.png');
 	background-repeat:repeat-x;
 }
 table.tabMenu td.entrySel{
 	background-color:#88C4E0;
-	background-image:url('../db.irowiki.org/style/tabsel.png');
+	background-image:url('http://db.irowiki.org/style/tabsel.png');
 	background-repeat:repeat-x;
 }
 
@@ -226,7 +226,7 @@ input.poll{
 	width:100px;
 }
 input[type='number']{
-    width: 100px;
+    width: 50px;
 }
 input.noborder{
 	background-color:transparent;
@@ -265,7 +265,7 @@ select{
 }
 .tabBar li div{
 	background-color:#68B5D8;
-	background-image:url('../db.irowiki.org/style/tabnorm.png');
+	background-image:url('http://db.irowiki.org/style/tabnorm.png');
 	background-repeat:repeat-x;
 	border-color:#58ADD4;
 	border-style:solid;
@@ -280,7 +280,7 @@ select{
 }
 .tabBar li div.active{
 	background-color:#68B5D8;
-	background-image:url('../db.irowiki.org/style/tabsel.png');
+	background-image:url('http://db.irowiki.org/style/tabsel.png');
 	background-repeat:repeat-x;
 	position:relative;
 	height:19px;
@@ -322,7 +322,7 @@ select{
 }
 .siteMenuArea li a{
 	background-color:#68B5D8;
-	background-image:url('../db.irowiki.org/style/menu.png');
+	background-image:url('http://db.irowiki.org/style/menu.png');
 	background-repeat:repeat-x;
 	border-color:#58ADD4;
 	border-style:solid;
@@ -370,44 +370,44 @@ select{
 
 .bgLgTitle{
 	background-color:#78BCDC;
-	background-image:url('../db.irowiki.org/style/lgtitle.png');
+	background-image:url('http://db.irowiki.org/style/lgtitle.png');
 	background-repeat:repeat-x;
 }
 .bgMdTitle{
 	background-color:#78BCDC;
-	background-image:url('../db.irowiki.org/style/mdtitle.png');
+	background-image:url('http://db.irowiki.org/style/mdtitle.png');
 	background-repeat:repeat-x;
 }
 .bgSmTitle{
 	background-color:#78BCDC;
-	background-image:url('../db.irowiki.org/style/smtitle.png');
+	background-image:url('http://db.irowiki.org/style/smtitle.png');
 	background-repeat:repeat-x;
 }
 
 .bgDkSub{
 	background-color:#389DCC;
-	background-image:url('../db.irowiki.org/style/dksub.png');
+	background-image:url('http://db.irowiki.org/style/dksub.png');
 	background-repeat:repeat-x;
 }
 
 .bgHeader1{
 	background-color:#A0A0A0;
-	background-image:url('../db.irowiki.org/style/header1.png');
+	background-image:url('http://db.irowiki.org/style/header1.png');
 	background-repeat:repeat-x;
 }
 .bgHeader2{
 	background-color:#969696;
-	background-image:url('../db.irowiki.org/style/header2.png');
+	background-image:url('http://db.irowiki.org/style/header2.png');
 	background-repeat:repeat-x;
 }
 .bgHeader3{
 	background-color:#8C8C8C;
-	background-image:url('../db.irowiki.org/style/header3.png');
+	background-image:url('http://db.irowiki.org/style/header3.png');
 	background-repeat:repeat-x;
 }
 .bgHeader4{
 	background-color:#828282;
-	background-image:url('../db.irowiki.org/style/header4.png');
+	background-image:url('http://db.irowiki.org/style/header4.png');
 	background-repeat:repeat-x;
 }
 

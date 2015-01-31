@@ -40,10 +40,10 @@ function calcMAtk( includeMultipliers )
 		
 		if(n_A_HEAD_DEF_PLUS >= 9 && n_A_card[8]==177) // KatheryneK
 			w += 2;
-		if(n_A_JobSearch()==cls_MAG && CardNumSearch(454))
+		if(n_A_JobSearch()==cls_MAG && CardNumSearch(card_ISET_MAGESET))
 			w +=3;
 		if(n_A_JobSearch2() == cls_ROG)
-			w += 10 * CardNumSearch(479); // Byorgue
+			w += 10 * CardNumSearch(card_BODY_BYORGUE); // Byorgue
 
 		if(EquipNumSearch(484) && SU_INT >= 70) // SageDiary
 			w += 5;
@@ -478,7 +478,7 @@ function CalcMagicDamage( rawDamage )
 	wBMC_MDEF = n_B[en_HARDMDEF];
 	var MDEF_Musi = 0;
 	
-	if ( n_B[en_BOSS] == 0 && CardNumSearch( 424 ) )
+	if ( n_B[en_BOSS] == 0 && CardNumSearch(card_HEAD_HIGHWIZARD) ) //High Wizard
 	{
 		MDEF_Musi = 1;
 	}
@@ -547,7 +547,7 @@ function CalcMagicDamage( rawDamage )
 	{
 		if ( n_A_JobSearch() === cls_MAG )
 		{ // Banshee card gives a bonus to mages who use these skills
-			matkMultiplier += 20 * CardNumSearch( 474 );
+			matkMultiplier += 20 * CardNumSearch(card_HEAD_BANSHEE);
 		}
 	}
 	

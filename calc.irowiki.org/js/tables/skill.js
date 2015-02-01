@@ -827,6 +827,198 @@ JobSkillPassOBJ = [
 ];
 }
 
+{
+    JobExclusiveSkillOBJ = [
+	[], // Blank
+	[skill_SW_BASH, skill_SW_MAGNUM_BREAK], // Swordman
+	[skill_TH_ENVENOM, skill_TH_SAND_ATTACK], // Thief
+	[skill_AC_HEAL, skill_AC_HOLY_LIGHT/*, skill_AC_RUWACH*/], // Acolyte
+	[skill_AR_ARROW_REPEL, skill_AR_ARROW_SHOWER, skill_AR_DOUBLE_STRAFE], // Archer
+	[skill_MA_COLD_BOLT, skill_MA_FIRE_BALL, skill_MA_FIRE_BOLT, skill_MA_FIRE_WALL, skill_MA_FROST_DIVER, skill_MA_LIGHTNING_BOLT, skill_MA_NAPALM_BEAT, skill_MA_SOUL_STRIKE, skill_MA_THUNDER_STORM], // Mage
+	[skill_ME_CART_REVOLUTION, skill_ME_MAMMONITE], // Merchant
+	
+	[/*skill_KN_AUTO_COUNTER,*/skill_KN_BOWLING_BASH, skill_KN_BRANDISH_SPEAR, skill_KN_CHARGE_ATTACK, skill_KN_PIERCE, skill_KN_SPEAR_BOOMERANG, skill_KN_SPEAR_STAB], // Knight
+	[skill_AS_GRIMTOOTH, skill_AS_SONIC_BLOW, skill_AS_SONIC_BLOW_SL, skill_AS_VENOM_KNIFE, skill_AS_VENOM_SPLASHER], // Assassin
+	[skill_PR_HOLY_LIGHT_SL, skill_PR_MAGNUS_EXORCISMUS, skill_PR_SANCTUARY, skill_PR_RESSURECTION, skill_PR_TURN_UNDEAD], // Priest
+	[skill_HU_BEAST_STRAFING, skill_HU_BLITZ_BEAT, skill_HU_FANTASTIC_ARROW, skill_HU_BLAST_MINE, skill_HU_CLAYMORE_TRAP, skill_HU_FREEZING_TRAP, skill_HU_LAND_MINE], // Hunter
+	[skill_WI_EARTH_SPIKE, skill_WI_FIRE_PILLAR, skill_WI_FROST_NOVA, skill_WI_HEAVENS_DRIVE, skill_WI_JUPITEL_THUNDER, skill_WI_LORD_OF_VERMILLION, skill_WI_METEOR_STORM, skill_WI_SIGHTRASHER, skill_WI_STORM_GUST, skill_WI_WATER_BALL], // Wizard
+	[], //Blacksmith
+	[skill_CR_GRAND_CROSS, skill_AC_HEAL, skill_CR_HOLY_CROSS, skill_CR_SHIELD_BOOMERANG, skill_CR_SHIELD_BOOMERANG_SL, skill_CR_SMITE], // Crusader
+	[skill_RG_BACK_STAB, skill_AR_DOUBLE_STRAFE, skill_RG_SIGHTLESS_MIND, skill_RG_SNATCH], // Rogue
+	[skill_MO_EXCRUCIATING_PALM, skill_MO_MAX_GUILLOTINE_FIST, skill_MO_GUILLOTINE_FIST, skill_MO_OCCULT_IMPACTION, skill_MO_RAGING_TRIFECTA_BLOW, skill_MO_RAGING_QUADRUPLE_BLOW, skill_MO_RAGING_THRUST, skill_MO_THROW_SPIRIT_SPHERES], // Monk
+	[skill_BA_MELODY_STRIKE], // Bard
+	[skill_DA_SLINGING_ARROW], // Dancer
+	[skill_WI_EARTH_SPIKE, skill_SA_HEAVENS_DRIVE], // Sage
+	[skill_AL_ACID_TERROR, skill_AL_BOMB], // Alchemist
+	[skill_SW_BASH, skill_TH_ENVENOM, skill_AC_HEAL, skill_SW_MAGNUM_BREAK, skill_ME_MAMMONITE, skill_MA_COLD_BOLT, skill_MA_FIRE_BALL, skill_MA_FIRE_BOLT, skill_MA_FIRE_WALL, skill_MA_FROST_DIVER, skill_MA_LIGHTNING_BOLT, skill_MA_NAPALM_BEAT, skill_MA_SOUL_STRIKE, skill_MA_THUNDER_STORM], // Super Novice
+	
+	[skill_LK_CLASHING_SPIRAL, skill_LK_TRAUMATIC_BLOW, skill_LK_VITAL_STRIKE], // Lord Knight
+	[skill_AX_METEOR_ASSAULT, skill_AX_SOUL_DESTROYER], // Assassin Cross
+	[], // High Priest
+	[skill_SN_FALCON_ASSAULT, skill_SN_FOCUSED_ARROW_STRIKE], // Sniper
+	[skill_HW_GRAVITY_FIELD, skill_HW_NAPALM_VULCAN, skill_HW_STAVE_CRASHER], // High Wizard
+	[skill_MS_HIGH_SPEED_CART_RAM], // Mastersmith
+	[skill_PA_GLORIA_DOMINI, skill_PA_MARTYR_RECONING, skill_PA_RAPID_SMITING], // Paladin
+	[], // Stalker
+	[skill_CH_CHAIN_CRUSH_COMBO, skill_CH_GLACIER_FIST, skill_CH_RAGING_PALM_STRIKE], // Champion
+	[skill_CG_ARROW_VULCAN], // Ministrel
+	[skill_CG_ARROW_VULCAN], // Gypsy
+	[], // Scholar
+	[skill_BC_ACID_DEMONSTRATION], // Biochemist
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[], // High Merchant
+	[skill_TK_COUNTER_KICK, skill_WI_EARTH_SPIKE, skill_TK_FLYING_KICK, skill_TKK_FLYING_KICK_SPRINT, skill_TK_HEEL_DROP, skill_TK_ROUNDOUSE, skill_TK_TORNADO_KICK], // Taekwon Kid
+	[skill_HEAT, skill_HEAT_WALL], // Taekwon Master
+	[skill_WI_EARTH_SPIKE, skill_SL_ESMA, skill_SL_ESTIN, skill_SL_ESTUN], // Soul Linker
+	[skill_NIN_BLAZE_SHIELD, skill_NIN_EXPLODING_DRAGON, skill_NIN_FIRST_WIND, skill_NIN_FLAMING_PETALS, skill_NIN_FLIP_TATAMI, skill_NIN_FREEZING_SPEAR, skill_NIN_HAZE_SLASHER, skill_NIN_KILLING_STRIKE_MAX, skill_NIN_KILLING_STRIKE, skill_NIN_LIGHTNING_JOLT, skill_NIN_SHADOW_SLASH, skill_NIN_SNOW_FLAKE_DRAFT, skill_NIN_THROW_COINS, skill_NIN_THROW_DAGGER, skill_NIN_THROW_HUUMA_SHURIKEN, skill_NIN_THROW_KUNAI, skill_NIN_WIND_BLADE], // Ninja
+	[skill_GS_BULLS_EYE, skill_GS_CROWD_CONTROL_SHOT, skill_GS_DESPERADO, skill_GS_DISARM, skill_GS_FULL_BLAST, skill_GS_GUNSLINGER_MINE, skill_GS_MAGICAL_BULLET, skill_GS_SPREAD_SHOT, skill_GS_TRACKING, skill_GS_TRIGGER_HAPPY_SHOT, skill_GS_TRIPLE_ACTION, skill_GS_WOUNDING_SHOT] // Gunslinger	
+    ];
+}
+
+{
+    JobCopyableSkillOBJ = [
+	[],
+	JobExclusiveSkillOBJ[cls_SWO],
+	[], // Thief
+	JobExclusiveSkillOBJ[cls_ACO],
+	JobExclusiveSkillOBJ[cls_ARC],
+	JobExclusiveSkillOBJ[cls_MAG],
+	[skill_ME_MAMMONITE], // Merchant
+	[skill_KN_BOWLING_BASH], // Knight
+	[skill_AS_VENOM_KNIFE, skill_AS_VENOM_SPLASHER], // Assassin
+	[/*skill_PR_ASPERSIO, skill_PR_BS_SACRIMENTI, skill_PR_SANCTUARY */skill_PR_MAGNUS_EXORCISMUS, skill_PR_RESSURECTION, skill_PR_TURN_UNDEAD], // Priest
+	[skill_HU_BLAST_MINE, skill_HU_CLAYMORE_TRAP, skill_HU_LAND_MINE], // Hunter
+	JobExclusiveSkillOBJ[cls_WIZ],
+	[], // Blacksmith
+	[skill_CR_GRAND_CROSS, skill_CR_HOLY_CROSS, skill_CR_SHIELD_BOOMERANG, skill_CR_SMITE], // Crusader
+	[], // Rogue
+	[skill_MO_MAX_GUILLOTINE_FIST, skill_MO_GUILLOTINE_FIST, skill_MO_OCCULT_IMPACTION, skill_MO_RAGING_TRIFECTA_BLOW, skill_MO_THROW_SPIRIT_SPHERES], // Monk
+	[], // Bard
+	[], // Dancer
+	[], // Sage
+	[skill_AL_ACID_TERROR, skill_AL_BOMB], // Alchemist
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[skill_TK_FLYING_KICK], // Taekwon Kid
+	[],
+	[],
+	[] // Ninja
+    ];
+}
+
+    skillTree_FIRSTJOB = 0;
+    skillTree_SECONDJOB = 1;
+    skillTree_TRANS = 2;
+    skillTree_THIRDJOB = 3;
+    
+    skillTree_SWORDMAN_COPY = 4;
+    skillTree_THIEF_COPY = 5;
+    skillTree_ACOLYTE_COPY = 6;
+    skillTree_ARCHER_COPY = 7;
+    skillTree_MAGE_COPY = 8;
+    skillTree_MERCHANT_COPY = 9;
+    skillTree_EXPANDED_COPY = 10;
+    
+{
+    JobSkillTreeNameOBJ = [
+	"1st Job Skills",
+	"2nd Job Skills",
+	"Transcended Job Skills",
+	"Third Job Skills",
+	"Swordman Jobs Skills",
+	"Thief Jobs Skills",
+	"Acolyte Jobs Skills",
+	"Archer Jobs Skills",
+	"Mage Jobs Skills",
+	"Merchant Jobs Skills",
+	"Expanded Jobs Skills"
+    ];
+}
+    
+{
+    JobSkillTreeActiveOBJ = [
+	[ ], // Novice
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]] ], // Swordy
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]] ], // Thief
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]] ], // Acolyte
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]] ], // Archer
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]] ], // Mage
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]] ], // Merchant
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_KNI]] ], // Knight
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ASS]] ], // Assassin
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_PRI]] ], // Priest
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_HUN]] ], // Hunter
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_WIZ]] ], // Wizard
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]] ], // Blacksmith
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_CRU]] ], // Crusader
+	[  // Rogue
+	    [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ROG]], 
+	    [skillTree_SWORDMAN_COPY, JobCopyableSkillOBJ[cls_SWO].concat(JobCopyableSkillOBJ[cls_KNI]).concat(JobCopyableSkillOBJ[cls_CRU])], [skillTree_ACOLYTE_COPY, JobCopyableSkillOBJ[cls_ACO].concat(JobCopyableSkillOBJ[cls_PRI]).concat(JobCopyableSkillOBJ[cls_MON])], 
+	    [skillTree_ARCHER_COPY, JobCopyableSkillOBJ[cls_ARC].concat(JobCopyableSkillOBJ[cls_HUN])], [skillTree_MAGE_COPY, JobCopyableSkillOBJ[cls_MAG].concat(JobCopyableSkillOBJ[cls_WIZ])],
+	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC])] 
+	], // Rogue
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_MON]] ], // Monk
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_BAR]] ], // Bard
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_DAN]] ], // Dancer
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_SAG]] ], // Sage
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ALC]] ], // Alchemist
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SNOVI]] ], // Super Novice
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_KNI]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_LOR]] ], // Lord Knight
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ASS]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_ASX]] ], // Assassin Cross
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_PRI]] ], // High Priest
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_HUN]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_SNI]] ], // Sniper
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_WIZ]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_HWI]] ], // High Wizard
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_MAS]] ], // Mastersmith
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_CRU]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_PAL]] ], // Paladin
+	[  // Stalker
+	    [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ROG]], 
+	    [skillTree_SWORDMAN_COPY, JobCopyableSkillOBJ[cls_SWO].concat(JobCopyableSkillOBJ[cls_KNI]).concat(JobCopyableSkillOBJ[cls_CRU])], [skillTree_ACOLYTE_COPY, JobCopyableSkillOBJ[cls_ACO].concat(JobCopyableSkillOBJ[cls_PRI]).concat(JobCopyableSkillOBJ[cls_MON])], 
+	    [skillTree_ARCHER_COPY, JobCopyableSkillOBJ[cls_ARC].concat(JobCopyableSkillOBJ[cls_HUN])], [skillTree_MAGE_COPY, JobCopyableSkillOBJ[cls_MAG].concat(JobCopyableSkillOBJ[cls_WIZ])],
+	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC])] 
+	], // Stalker
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_MON]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_CHA]] ], // Champion
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_BAR]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_CLO]] ], // Clown
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_DAN]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_GYP]] ], // Gypsy
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_SAG]] ], // Scholar
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ALC]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_BIO]] ], // Biochemist
+	[ ], // High Novice
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]] ], // High Swordy
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]] ], // High Thief
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]] ], // High Acolyte
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]] ], // High Archer
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]] ], // High Mage
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]] ], // High Merchant
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_TKK]] ], // Taekwon Kid
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_TKK]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_TKM]] ], // Taekwon Master
+	[ [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_SL]] ], // Soul Linker
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_NIN]] ], // Ninja
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_GUN]] ] // Gunslinger
+    ];
+}
+
 { // JobSkillActiveOBJ[Class] = ActiveSkills
 JobSkillActiveOBJ = [
 [  0,999], // Novi
@@ -906,14 +1098,14 @@ JobSkillActiveOBJ = [
 ];
 }
 
-{ InsertSkill = [
+{ InsertSkill = [ // Skills obtained via equipped item or card [id, isItem, SkillID, Lv]
 [0,0,0,0],
 [1,1,54,3], // Coldbolt 3
 [2,1,51,3], // Firebolt 3
 [3,1,6,5],
 [4,1,25,3],
 [5,1,25,1],
-[6,0,26,1],
+[6,0,26,1], // Cure Lv. 1
 [7,1,25,5],
 [8,1,302,1],
 [9,1,126,1],

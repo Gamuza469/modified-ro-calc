@@ -785,12 +785,28 @@ function AdjustActiveSkillList( job )
 	
 	for ( var i = 0; i < len; i++ )
 	{
-		activeSkillsSelect.options[0] = null;
+		//activeSkillsSelect.options[0] = null;
+		$('select[name="A_ActiveSkill"]').children().remove();
+	}
+	
+	$('select[name="A_ActiveSkill"]').append('<option value="0">Basic Attack</option>'); // Always put Basic Attack
+	
+	for (var i = 0; i < JobSkillTreeActiveOBJ[job].length; i++) {
+	    var jobSkillTree = JobSkillTreeActiveOBJ[job][i][0];
+	    var jobSkillTreeSkills = JobSkillTreeActiveOBJ[job][i][1];
+	    
+	    AppendOptGroup(jobSkillTree);
+	    for (var jobID = 0; jobID < jobSkillTreeSkills.length; jobID++) {
+		$('select[name="A_ActiveSkill"] optgroup[name="jobSkillTree' + jobSkillTree + '"]').append('<option value=" '+ jobSkillTreeSkills[jobID] + '">' + SKILL_NAME[jobSkillTreeSkills[jobID]][Language] + '</option>');
+	    }
 	}
 	
 	for ( var i = 0; JobSkillActiveOBJ[job][i] !== 999; i++ )
 	{
-		activeSkillsSelect.options[i] = new Option( SKILL_NAME[JobSkillActiveOBJ[job][i]][Language], JobSkillActiveOBJ[job][i] );
+		//$A_ActiveSkill.children('optgroup').append('<option value="' + JobSkillActiveOBJ[job][i] + '">' + SKILL_NAME[JobSkillActiveOBJ[job][i]][Language] + '</option>');
+		
+		
+		//activeSkillsSelect.options[i] = new Option( SKILL_NAME[JobSkillActiveOBJ[job][i]][Language], JobSkillActiveOBJ[job][i] );
 	}
 	
 	for ( var i = 0; i < 20; i++ )
@@ -801,6 +817,10 @@ function AdjustActiveSkillList( job )
 	ActiveSkillSetPlus();
 	ClickActiveSkill();
 	WeaponSet2();
+}
+
+function AppendOptGroup (optGroupId) {
+    $('select[name="A_ActiveSkill"]').append('<optgroup name="jobSkillTree' + optGroupId + '" label="' + JobSkillTreeNameOBJ[optGroupId] + '"></optgroup>');
 }
 
 function BuildPassiveSkillTable()

@@ -96,15 +96,27 @@
 	            <table class="bgLtTable aligned">
 	            	<tbody><tr>
 	            		<td class="bgLtRow3 padded optCaption">
-					02/XX/2015:
+					04/21/2015:
+					    <ul style="margin-left: 5px;">
+						<li>Fixed a bug in offensive Heal formula.</li>
+						<li>Fixed Killing Stroke formula.</li>
+						<li>Fixed Venom Splasher formula.</li>
+						<li>Fixed Soul Destroyer formula. Now based on MATK (will need your feedback on this).</li>
+					    </ul>
+					    - Gamuza<br/>
+					02/08/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150208').toggle()">
+					<span style="display: none;" id="note20150208">
 					    <ul style="margin-left: 5px;">
 						<li>Dark Claw debuff now only applies on non-Boss monsters.</li>
 						<li>Fixed the speed issue with the Experience Calculator.</li>
 						<li>Re-implemented current EXP/jEXP inputs to the Experience Calculator.</li>
 						<li>Re-ordered and sorted active (battle) skill lists.</li>
-						<li>Changed internally the way the cards are identified.</li>
+						<li>Changed internally the way some of the cards are identified.</li>
 						<li>Re-ordered the Pet list.</li>
+						<li>Re-ordered the Temporary Effect list.</li>
 					    </ul>
+					    - Gamuza<br/>
+					</span><br/>
 					01/30/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150130').toggle()">
 					<span style="display: none;" id="note20150130">
 					    <ul style="margin-left: 5px;">
@@ -252,7 +264,7 @@
 								    <option value="18">Sage</option>
 								    <option value="19">Alchemist</option>
 							    </optgroup>
-							    <optgroup label="Other Novice classes">
+							    <optgroup label="Super Novice">
 								    <option value="20">Super Novice</option>
 								    <option value="73">Expanded Super Novice</option>
 							    </optgroup>
@@ -697,6 +709,150 @@
 							    </tr>
 							</tbody>
 						    </table>
+						    <div class="mdSeperator">&nbsp;</div>
+						    <div class="bgSmTitle smTitle">Additional Enchants&nbsp;-&nbsp;(Mora enchants, LVL4 weapons, custom ones)</div>
+						    <table class="bgLtTable">
+							 <tbody>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="13%">STR</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_STR" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">AGI</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_AGI" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">VIT</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_VIT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">INT</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_INT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">DEX</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_DEX" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow3 padded optCaption" width="13%">LUK</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_LUK" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">ATK</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ATK" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">ATK %</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ATK_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">MATK</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MATK" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">MATK %</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MATK_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="13%">FLEE</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_FLEE" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">P. DODGE</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_DODGE" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">MAX HP</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HP" max="5000" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">MAX SP</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_SP" max="200" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow4 padded optCaption" width="13%">MAX HP %</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HP_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow3 padded optCaption" width="13%">MAX SP %</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_SP_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">Ranged Damage %</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_RANGED" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">DEF</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_DEF" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">MDEF</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MDEF" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">CRIT</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_CRIT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow3 padded optCaption" width="13%">Damage Reduction %</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_RED_PERC" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">ASPD</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ASPD" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">ASPD %</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ASPD_PERC" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%">Cast Time %</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_CASTING" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
+								<td class="bgLtRow3 padded optCaption" width="13%"></td>
+								<td class="bgLtRow4 padded optArea" width="7%"></td>
+							    </tr>
+							 </tbody>
+						    </table>
+						    <div STYLE="DISPLAY:NONE;" class="mdSeperator">&nbsp;</div>
+						    <div STYLE="DISPLAY:NONE;" class="bgSmTitle smTitle">Equipment Enchant</div>
+						    <table STYLE="DISPLAY:NONE;" class="bgLtTable">
+							<tbody>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Head</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"><option>Exp. Archer</option></select><br/><select class="encValue"><option>Lv. 1</option></select></td>
+								<td class="bgLtRow3 padded optArea" width="16%"></td>
+								<td class="bgLtRow3 padded optCaption" width="16%"></td>
+								<td class="bgLtRow3 padded optArea" width="16%"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Body</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow3 padded optArea" width="16%"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Right Hand</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow3 padded optArea" width="16%"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Left Hand<br/>Shield</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow3 padded optArea" width="16%"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Garment</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow3 padded optArea" width="16%"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Shoes</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow3 padded optArea" width="16%"></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Right Accessory</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+							    </tr>
+							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="12%">Left Accessory</td>
+								<td class="bgLtRow3 padded optArea" width="9%">Enchant Class:</td>
+								<td class="bgLtRow4 padded optCaption" width="15%"><select class="encClass"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optCaption" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+								<td class="bgLtRow4 padded optArea" width="16%"><select class="encType"></select><br/><select class="encValue"></select></td>
+							    </tr>
+							</tbody>
+						    </table>
 						</td>
 					    </tr>
 					</tbody>
@@ -707,72 +863,7 @@
 				<td style="width: 33%; vertical-align: top;"></td>
 				<td style="width: 66%; vertical-align: top;">-->
 				    <!--Additional Equip Boosts-->
-				    <div class="mdSeperator">&nbsp;</div>
-				    <div class="bgSmTitle smTitle">Additional Enchants&nbsp;-&nbsp;(Mora enchants, LVL4 weapons, custom ones)</div>
-				    <table class="bgLtTable">
-					 <tbody>
-					    <tr>
-						<td class="bgLtRow4 padded optCaption" width="13%">STR</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_STR" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">AGI</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_AGI" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">VIT</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_VIT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">INT</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_INT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">DEX</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_DEX" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-					    </tr>
-					    <tr>
-						<td class="bgLtRow3 padded optCaption" width="13%">LUK</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_LUK" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">ATK</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ATK" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">ATK %</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ATK_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">MATK</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MATK" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">MATK %</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MATK_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-					    </tr>
-					    <tr>
-						<td class="bgLtRow4 padded optCaption" width="13%">FLEE</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_FLEE" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">P. DODGE</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_DODGE" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">MAX HP</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HP" max="5000" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">MAX SP</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_SP" max="200" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow4 padded optCaption" width="13%">MAX HP %</td>
-						<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HP_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-					    </tr>
-					    <tr>
-						<td class="bgLtRow3 padded optCaption" width="13%">MAX SP %</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_SP_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">Ranged Damage %</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_RANGED" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">DEF</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_DEF" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">MDEF</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MDEF" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">CRIT</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_CRIT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-					    </tr>
-					    <tr>
-						<td class="bgLtRow3 padded optCaption" width="13%">Damage Reduction %</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_RED_PERC" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">ASPD</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ASPD" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">ASPD %</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ASPD_PERC" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%">Cast Time %</td>
-						<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_CASTING" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-						<td class="bgLtRow3 padded optCaption" width="13%"></td>
-						<td class="bgLtRow4 padded optArea" width="7%"></td>
-					    </tr>
-					 </tbody>
-				    </table>
+				    
 <!--				</td>
 			    </tr>
 			</tbody>-->
@@ -1348,7 +1439,7 @@
 	                        	Original simulator created by
 	                        	<a href="http://roratorio.2-d.jp/ro/">ROratorio</a>. Later updated by <a href="http://calcxre.wushuang.ws/">Nretep. Updated also by </a><a href="http://forums.irowiki.org/member.php?u=21358">ProGM</a> &amp; Roger<br>
 	                        	Currently updated by Gamuza, Kaddy &amp; iROWiki.org</td>
-	                        <td class="right">Current Version 2.1.3<br>
+	                        <td class="right">Current Version 2.1.4<br>
 	                        Hosted by iROWiki.org</td>
 	                    </tr>
 	                </tbody></table>

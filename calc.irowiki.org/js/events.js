@@ -226,6 +226,7 @@ function CalcExtendedInfo()
 	}
 	else if ( wKK === 1 )
 	{
+		myInnerHtml( "A_KakutyouSel", "", 0 );
 		// Build Heal Value Table
 		var healTable = '<table class="bgLtTable"><tr>';
 		healTable += '<td class="bgLtRow3 padded optCaption">Heal 1</td>';
@@ -1271,10 +1272,10 @@ with(document.calcForm)
 	}
 	else if ( n_A_ActiveSkill == skill_AS_VENOM_SPLASHER )
 	{
-		myInnerHtml("AASkillName","<br/>Venom Splasher Lvl:",0);
+		myInnerHtml("AASkillName","<br/>Poison React Lv.:",0);
 		myInnerHtml("AASkill",'<select name="SkillSubNum" onchange="calc()"></select>',0);
-		for(i=0;i<=10;i++)
-			SkillSubNum.options[i] = new Option(i,i);
+		for(i=0;i<=5;i++)
+			SkillSubNum.options[i] = new Option(i+5,i+5);
 		SkillSubNum.value=5;
 		if(n_A_JobSearch2() == 14)
 			SkillSubNum.value=0;
@@ -1332,9 +1333,14 @@ with(document.calcForm)
 			  n_A_ActiveSkill === skill_NIN_KILLING_STRIKE_MAX )
 	{
 		// remaining HP
-		myInnerHtml("AASkillName","<br/>Remaining HP:",0);
-		myInnerHtml("AASkill",'<input type="text" name="SkillSubNum" size=6>',0);
-		SkillSubNum.value = n_A_MaxHP -1;
+		if (n_A_ActiveSkill === skill_NIN_KILLING_STRIKE) {
+		    myInnerHtml("AASkillName","<br/>Remaining HP:",0);
+		    myInnerHtml("AASkill",'<input type="text" name="SkillSubNum" size=6>',0);
+		    SkillSubNum.value = n_A_MaxHP -1;
+		} else {
+		    myInnerHtml("AASkillName","",0);
+		    myInnerHtml("AASkill","",0);
+		}
 		// number of mirrors
 		myInnerHtml( "AASkillName2", "<br/># Mirrors: ", 0 );
 		myInnerHtml( "AASkill2", '<select id="SkillSubNum2" style="width:50px;" onchange="calc()"></select>', 0 );

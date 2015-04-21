@@ -837,6 +837,7 @@ function BuildPassiveSkillTable()
 	for ( skillCount; JobSkillPassOBJ[job][skillCount] !== 999; skillCount++ );
 	if ( skillCount <= 0 )
 	{
+		$('#id_passiveSkills table').remove();
 		return;
 	}
 

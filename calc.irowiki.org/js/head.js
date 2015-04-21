@@ -1070,7 +1070,7 @@ function DisplayAdditionalBattleInfo()
 		if(str_PerHIT_DMG == 0)
 			str_bSUB += n_PerHIT_DMG;
 		else
-			str_bSUB += str_PerHIT_DMG;
+			str_bSUB += "<br/>" + str_PerHIT_DMG;
 	}
 	myInnerHtml( "bSUBname", str_bSUBname, 0 );
 	myInnerHtml( "bSUB", str_bSUB, 0 );

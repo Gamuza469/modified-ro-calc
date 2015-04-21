@@ -876,7 +876,35 @@ JobSkillPassOBJ = [
 	[skill_HEAT, skill_HEAT_WALL], // Taekwon Master
 	[skill_WI_EARTH_SPIKE, skill_SL_ESMA, skill_SL_ESTIN, skill_SL_ESTUN], // Soul Linker
 	[skill_NIN_BLAZE_SHIELD, skill_NIN_EXPLODING_DRAGON, skill_NIN_FIRST_WIND, skill_NIN_FLAMING_PETALS, skill_NIN_FLIP_TATAMI, skill_NIN_FREEZING_SPEAR, skill_NIN_HAZE_SLASHER, skill_NIN_KILLING_STRIKE_MAX, skill_NIN_KILLING_STRIKE, skill_NIN_LIGHTNING_JOLT, skill_NIN_SHADOW_SLASH, skill_NIN_SNOW_FLAKE_DRAFT, skill_NIN_THROW_COINS, skill_NIN_THROW_DAGGER, skill_NIN_THROW_HUUMA_SHURIKEN, skill_NIN_THROW_KUNAI, skill_NIN_WIND_BLADE], // Ninja
-	[skill_GS_BULLS_EYE, skill_GS_CROWD_CONTROL_SHOT, skill_GS_DESPERADO, skill_GS_DISARM, skill_GS_FULL_BLAST, skill_GS_GUNSLINGER_MINE, skill_GS_MAGICAL_BULLET, skill_GS_SPREAD_SHOT, skill_GS_TRACKING, skill_GS_TRIGGER_HAPPY_SHOT, skill_GS_TRIPLE_ACTION, skill_GS_WOUNDING_SHOT] // Gunslinger	
+	[skill_GS_BULLS_EYE, skill_GS_CROWD_CONTROL_SHOT, skill_GS_DESPERADO, skill_GS_DISARM, skill_GS_FULL_BLAST, skill_GS_GUNSLINGER_MINE, skill_GS_MAGICAL_BULLET, skill_GS_SPREAD_SHOT, skill_GS_TRACKING, skill_GS_TRIGGER_HAPPY_SHOT, skill_GS_TRIPLE_ACTION, skill_GS_WOUNDING_SHOT], // Gunslinger	
+	[skill_RUN_CRUSH_STRIKE, skill_RUN_DEATH_BOUND, skill_RUN_DRAGON_BREATH, skill_RUN_DRAGON_BREATH_WATER, skill_RUN_HUNDRED_SPEAR, skill_RUN_IGNITION_BREAK, skill_RUN_PHANTOM_THRUST, skill_RUN_SONIC_WAVE, skill_RUN_STORM_BLAST, skill_RUN_WIND_CUTTER], // Rune Knight
+	[],
+	[skill_GLT_COUNTER_SLASH, skill_GLT_CROSS_IMPACT, skill_GLT_CROSS_RIPPER_SLASHER, skill_GLT_DARK_CLAW, skill_GLT_DARK_ILLUSION, skill_GLT_PHANTOM_MENACE, skill_GLT_POISON_LEECH_END, skill_GLT_ROLLING_CUTTER, skill_GLT_WEAPON_CRUSH], // Guillotine Cross
+	[],
+	[skill_ABI_ADORAMUS, skill_ABI_JUDEX], // Archbishop
+	[],
+	[skill_RAN_AIMED_BOLT, skill_RAN_ARROW_STORM, skill_RAN_KEEN_NOSE, skill_RAN_WARG_BITE, skill_RAN_WARG_DASH, skill_RAN_WARG_STRIKE, skill_RAN_CLUSTER_BOMB, skill_RAN_FIRING_TRAP, skill_RAN_ICEBOUND_TRAP], // Ranger
+	[],
+	[skill_WAR_CHAIN_LIGHTNING, skill_WAR_COMET, skill_WAR_CRIMSON_ROCK, skill_WAR_DRAIN_LIFE, skill_WAR_EARTH_STRAIN, skill_WAR_FROSTY_MISTY, skill_WAR_HELL_INFERNO, skill_WAR_JACK_FROST, skill_WAR_SOUL_EXPANSION, skill_WAR_TETRA_VORTEX], // Warlock
+	[],
+	[skill_MEC_ARM_CANNON, skill_MEC_AXE_BOOMERANG, skill_MEC_AXE_TORNADO, skill_MEC_FAW_MAGIC_DECOY, skill_MEC_FAW_SILVER_SNIPER, skill_MEC_FLAME_LAUNCHER, skill_MEC_COLD_SLOWER, skill_MEC_BOOST_KNUCKLE, skill_MEC_LAVA_FLOW, skill_MEC_PILE_BUNKER, skill_MEC_POWER_SWING, skill_MEC_SELF_DESTRUCTION, skill_MEC_VULCAN_ARM], // Mechanic
+	[],
+	[skill_ROY_EARTH_DRIVE, skill_ROY_EXCEED_BREAK, skill_ROY_HESPERUS_LIT, skill_ROY_MOON_SLASHER, skill_ROY_OVERBRAND, skill_ROY_OVERBRAND_OLD, skill_ROY_PINPOINT_ATTACK, skill_ROY_RAGE_BURST, skill_ROY_RAY_OF_GENESIS, skill_ROY_SHIELD_PRESS, skill_ROY_SHIELD_SPELL_ATK, skill_ROY_SHIELD_SPELL_MATK, skill_ROY_SPEAR_CANNON, skill_ROY_VANISHING_POINT], // Royal Guard
+	[],
+	[skill_SHA_FEINT_BOMB, skill_SHA_TRIANGLE_SHOT], // Shadow Chaser
+	[],
+	[skill_SUR_CRESCENT_ELBOW, skill_SUR_DRAGON_COMBO, skill_SUR_FLASH_COMBO, skill_SUR_EARTH_SHAKER, skill_SUR_FALLEN_EMPIRE, skill_SUR_GATE_OF_HELL, skill_SUR_GENTLE_TOUCH_SILENCE, skill_SUR_KNUCKLE_ARROW, skill_SUR_LIGHTENING_RIDE, skill_SUR_LIGHTNING_WALK, skill_SUR_LION_HOWLING, skill_SUR_RAMPAGE_BLASTER, skill_SUR_SKY_NET_BLOW, skill_SUR_TIGER_CANNON, skill_SUR_WINDMILL], // Sura
+	[],
+	[skill_MIWA_SOUND_OF_DESTRUCTION, skill_MIWA_GREAT_ECHO, skill_MIWA_METALLIC_SOUND, skill_MIWA_REVERBERATION, skill_MIWA_SEVERE_RAINSTORM], // Maestro
+	[],
+	[skill_MIWA_SOUND_OF_DESTRUCTION, skill_MIWA_GREAT_ECHO, skill_MIWA_METALLIC_SOUND, skill_MIWA_REVERBERATION, skill_MIWA_SEVERE_RAINSTORM], // Wanderer
+	[],
+	[skill_SOR_CLOUD_KILL, skill_SOR_DIAMOND_DUST, skill_SOR_EARTH_GRAVE, skill_SOR_ELECTRIC_WALK, skill_SOR_FIRE_WALK, skill_SOR_POISON_BUSTER, skill_SOR_PSYCHIC_WAVE, skill_SOR_SPELL_FIST_CBOLT, skill_SOR_SPELL_FIST_FBOLT, skill_SOR_SPELL_FIST_LBOLT, skill_SOR_VARETYR_SPEAR], // Sorcerer
+	[],
+	[skill_GEN_CART_CANNON, skill_GEN_CART_TORNADO, skill_GEN_HALLUCINATION_DRUG, skill_GEN_THORN_TRAP, skill_GEN_WALL_OF_THORNS], // Genetic
+	[],
+	[skill_KAG_CROSS_STRIKE, skill_KAG_HUUMA_SHURIKEN_STRIKE, skill_KAG_OVERTHROW, skill_KAG_SPINTHROW_KUNAI, skill_KAG_SPIRIT_BREAKER, skill_KAG_THROW_EXPLOSIVE_KUNAI], // Kagerou/Oboro
+	[skill_WI_EARTH_SPIKE, skill_HU_FREEZING_TRAP, skill_WI_FIRE_PILLAR, skill_WI_FROST_NOVA, skill_WI_HEAVENS_DRIVE, skill_CR_HOLY_CROSS, skill_WI_JUPITEL_THUNDER, skill_WI_SIGHTRASHER, skill_HW_STAVE_CRASHER, skill_WI_WATER_BALL] // Expanded Super Novice
     ];
 }
 
@@ -902,20 +930,21 @@ JobSkillPassOBJ = [
 	[], // Dancer
 	[], // Sage
 	[skill_AL_ACID_TERROR, skill_AL_BOMB], // Alchemist
+	[], // Super Novice
+	[], // Lord Knight
+	[],
+	[],
+	[],
+	[],
+	[],
+	[], // Paladin
 	[],
 	[],
 	[],
 	[],
 	[],
 	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
+	[], // High Novice
 	[],
 	[],
 	[],
@@ -925,7 +954,36 @@ JobSkillPassOBJ = [
 	[skill_TK_FLYING_KICK], // Taekwon Kid
 	[],
 	[],
-	[] // Ninja
+	[skill_NIN_BLAZE_SHIELD, skill_NIN_EXPLODING_DRAGON, skill_NIN_FIRST_WIND, skill_NIN_FLAMING_PETALS, skill_NIN_FLIP_TATAMI, skill_NIN_FREEZING_SPEAR, skill_NIN_HAZE_SLASHER, skill_NIN_LIGHTNING_JOLT, skill_NIN_SHADOW_SLASH, skill_NIN_SNOW_FLAKE_DRAFT, skill_NIN_WIND_BLADE], // Ninja
+	[], // Gunslinger
+	[skill_RUN_IGNITION_BREAK, skill_RUN_SONIC_WAVE, skill_RUN_WIND_CUTTER], // Rune Knight
+	[],
+	[skill_GLT_CROSS_IMPACT, skill_GLT_DARK_ILLUSION, skill_GLT_PHANTOM_MENACE], // Guillotine Cross 
+	[],
+	JobExclusiveSkillOBJ[cls_ABI], // Archbishop
+	[],
+	[skill_RAN_AIMED_BOLT, skill_RAN_ARROW_STORM, skill_RAN_CLUSTER_BOMB, skill_RAN_FIRING_TRAP, skill_RAN_ICEBOUND_TRAP], // Ranger
+	[],
+	[skill_WAR_CHAIN_LIGHTNING, skill_WAR_COMET, skill_WAR_CRIMSON_ROCK, skill_WAR_DRAIN_LIFE, skill_WAR_EARTH_STRAIN, skill_WAR_FROSTY_MISTY, skill_WAR_HELL_INFERNO, skill_WAR_JACK_FROST, skill_WAR_SOUL_EXPANSION], // Warlock
+	[],
+	[], // Mechanic
+	[],
+	[skill_ROY_EARTH_DRIVE, skill_ROY_SHIELD_PRESS, skill_ROY_SHIELD_SPELL_ATK, skill_ROY_SHIELD_SPELL_MATK], // Royal Guard
+	[],
+	[], // Shadow Chaser
+	[],
+	[skill_SUR_EARTH_SHAKER, skill_SUR_GATE_OF_HELL, skill_SUR_GENTLE_TOUCH_SILENCE, skill_SUR_KNUCKLE_ARROW, skill_SUR_LIGHTENING_RIDE, skill_SUR_LION_HOWLING, skill_SUR_RAMPAGE_BLASTER, skill_SUR_SKY_NET_BLOW, skill_SUR_TIGER_CANNON, skill_SUR_WINDMILL], // Sura
+	[],
+	[skill_MIWA_METALLIC_SOUND, skill_MIWA_REVERBERATION, skill_MIWA_SEVERE_RAINSTORM], // Maestro
+	[],
+	[], // Wanderer
+	[],
+	[skill_SOR_CLOUD_KILL, skill_SOR_DIAMOND_DUST, skill_SOR_EARTH_GRAVE, skill_SOR_ELECTRIC_WALK, skill_SOR_FIRE_WALK, skill_SOR_POISON_BUSTER, skill_SOR_PSYCHIC_WAVE, skill_SOR_VARETYR_SPEAR], // Sorcerer
+	[],
+	[skill_GEN_THORN_TRAP, skill_GEN_WALL_OF_THORNS], // Geneticist
+	[],
+	[], // Kagerou/Oboro
+	[] // Expanded Super Novice
     ];
 }
 
@@ -941,20 +999,22 @@ JobSkillPassOBJ = [
     skillTree_MAGE_COPY = 8;
     skillTree_MERCHANT_COPY = 9;
     skillTree_EXPANDED_COPY = 10;
+    skillTree_OTHER = 11;
     
 {
     JobSkillTreeNameOBJ = [
 	"1st Job Skills",
 	"2nd Job Skills",
 	"Transcended Job Skills",
-	"Third Job Skills",
+	"3rd Job Skills",
 	"Swordman Jobs Skills",
 	"Thief Jobs Skills",
 	"Acolyte Jobs Skills",
 	"Archer Jobs Skills",
 	"Mage Jobs Skills",
 	"Merchant Jobs Skills",
-	"Expanded Jobs Skills"
+	"Expanded Jobs Skills",
+	"Other Skills"
     ];
 }
     
@@ -978,7 +1038,8 @@ JobSkillPassOBJ = [
 	    [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ROG]], 
 	    [skillTree_SWORDMAN_COPY, JobCopyableSkillOBJ[cls_SWO].concat(JobCopyableSkillOBJ[cls_KNI]).concat(JobCopyableSkillOBJ[cls_CRU])], [skillTree_ACOLYTE_COPY, JobCopyableSkillOBJ[cls_ACO].concat(JobCopyableSkillOBJ[cls_PRI]).concat(JobCopyableSkillOBJ[cls_MON])], 
 	    [skillTree_ARCHER_COPY, JobCopyableSkillOBJ[cls_ARC].concat(JobCopyableSkillOBJ[cls_HUN])], [skillTree_MAGE_COPY, JobCopyableSkillOBJ[cls_MAG].concat(JobCopyableSkillOBJ[cls_WIZ])],
-	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC])] 
+	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC])], [skillTree_EXPANDED_COPY, JobCopyableSkillOBJ[cls_NIN]],
+	    [skillTree_OTHER, [skill_ALL_TOMAHAWK_THROWING]]
 	], // Rogue
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_MON]] ], // Monk
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_BAR]] ], // Bard
@@ -997,7 +1058,8 @@ JobSkillPassOBJ = [
 	    [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ROG]], 
 	    [skillTree_SWORDMAN_COPY, JobCopyableSkillOBJ[cls_SWO].concat(JobCopyableSkillOBJ[cls_KNI]).concat(JobCopyableSkillOBJ[cls_CRU])], [skillTree_ACOLYTE_COPY, JobCopyableSkillOBJ[cls_ACO].concat(JobCopyableSkillOBJ[cls_PRI]).concat(JobCopyableSkillOBJ[cls_MON])], 
 	    [skillTree_ARCHER_COPY, JobCopyableSkillOBJ[cls_ARC].concat(JobCopyableSkillOBJ[cls_HUN])], [skillTree_MAGE_COPY, JobCopyableSkillOBJ[cls_MAG].concat(JobCopyableSkillOBJ[cls_WIZ])],
-	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC])] 
+	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC])], [skillTree_EXPANDED_COPY, JobCopyableSkillOBJ[cls_NIN]],
+	    [skillTree_OTHER, [skill_ALL_TOMAHAWK_THROWING]]
 	], // Stalker
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_MON]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_CHA]] ], // Champion
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_BAR]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_CLO]] ], // Clown
@@ -1015,7 +1077,53 @@ JobSkillPassOBJ = [
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_TKK]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_TKM]] ], // Taekwon Master
 	[ [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_SL]] ], // Soul Linker
 	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_NIN]] ], // Ninja
-	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_GUN]] ] // Gunslinger
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_GUN]] ], // Gunslinger
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_KNI]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_RUN]] ], // Rune Knight
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_KNI]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_LOR]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_RUN]] ], // Rune Knight Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ASS]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_GLT]] ], // Guillotine Cross
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ASS]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_ASX]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_GLT]] ], // Guillotine Cross Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_PRI]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_ABI]] ], // Archbishop
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_PRI]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_ABI]] ], // Archbishop Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_HUN]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_RAN]] ], // Ranger
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_HUN]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_SNI]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_RAN]] ], // Ranger Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_WIZ]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_WAR]] ], // Warlock
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_WIZ]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_HWI]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_WAR]] ], // Warlock Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_MEC]] ], // Mechanic
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_MAS]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_MEC]] ], // Mechanic Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_CRU]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_ROY]] ], // Royal Guard
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SWO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_CRU]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_PAL]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_ROY]] ], // Royal Guard Trans
+	[  // Shadow Chaser
+	    [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ROG]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_SHA]], 
+	    [skillTree_SWORDMAN_COPY, JobCopyableSkillOBJ[cls_SWO].concat(JobCopyableSkillOBJ[cls_KNI]).concat(JobCopyableSkillOBJ[cls_CRU]).concat(JobCopyableSkillOBJ[cls_RUN]).concat(JobCopyableSkillOBJ[cls_ROY])], 
+	    [skillTree_ACOLYTE_COPY, JobCopyableSkillOBJ[cls_ACO].concat(JobCopyableSkillOBJ[cls_PRI]).concat(JobCopyableSkillOBJ[cls_MON]).concat(JobCopyableSkillOBJ[cls_ABI]).concat(JobCopyableSkillOBJ[cls_SUR])], 
+	    [skillTree_ARCHER_COPY, JobCopyableSkillOBJ[cls_ARC].concat(JobCopyableSkillOBJ[cls_HUN]).concat(JobCopyableSkillOBJ[cls_RAN]).concat(JobCopyableSkillOBJ[cls_MIN])], 
+	    [skillTree_MAGE_COPY, JobCopyableSkillOBJ[cls_MAG].concat(JobCopyableSkillOBJ[cls_WIZ]).concat(JobCopyableSkillOBJ[cls_WAR]).concat(JobCopyableSkillOBJ[cls_SOR])],
+	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC]).concat(JobCopyableSkillOBJ[cls_GEN])], 
+	    [skillTree_EXPANDED_COPY, JobCopyableSkillOBJ[cls_NIN]],
+	    [skillTree_OTHER, [skill_ALL_TOMAHAWK_THROWING]]
+	], // Shadow Chaser
+	[  // Shadow Chaser Trans
+	    [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_THI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ROG]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_SHA]], 
+	    [skillTree_SWORDMAN_COPY, JobCopyableSkillOBJ[cls_SWO].concat(JobCopyableSkillOBJ[cls_KNI]).concat(JobCopyableSkillOBJ[cls_CRU]).concat(JobCopyableSkillOBJ[cls_RUN]).concat(JobCopyableSkillOBJ[cls_ROY])], 
+	    [skillTree_ACOLYTE_COPY, JobCopyableSkillOBJ[cls_ACO].concat(JobCopyableSkillOBJ[cls_PRI]).concat(JobCopyableSkillOBJ[cls_MON]).concat(JobCopyableSkillOBJ[cls_ABI]).concat(JobCopyableSkillOBJ[cls_SUR])], 
+	    [skillTree_ARCHER_COPY, JobCopyableSkillOBJ[cls_ARC].concat(JobCopyableSkillOBJ[cls_HUN]).concat(JobCopyableSkillOBJ[cls_RAN]).concat(JobCopyableSkillOBJ[cls_MIN])], 
+	    [skillTree_MAGE_COPY, JobCopyableSkillOBJ[cls_MAG].concat(JobCopyableSkillOBJ[cls_WIZ]).concat(JobCopyableSkillOBJ[cls_WAR]).concat(JobCopyableSkillOBJ[cls_SOR])],
+	    [skillTree_MERCHANT_COPY, JobCopyableSkillOBJ[cls_MER].concat(JobCopyableSkillOBJ[cls_ALC]).concat(JobCopyableSkillOBJ[cls_GEN])], 
+	    [skillTree_EXPANDED_COPY, JobCopyableSkillOBJ[cls_NIN]],
+	    [skillTree_OTHER, [skill_ALL_TOMAHAWK_THROWING]]
+	], // Shadow Chaser Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_MON]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_SUR]] ], // Sura
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ACO]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_MON]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_CHA]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_SUR]] ], // Sura Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_BAR]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_MIN]] ], // Maestro
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_BAR]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_CLO]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_MIN]] ], // Maestro Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_DAN]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_WAN]] ], // Wanderer
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_ARC]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_DAN]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_GYP]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_WAN]] ], // Wanderer Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_SAG]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_SOR]] ], // Sorcerer
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MAG]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_SAG]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_SOR]] ], // Sorcerer Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ALC]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_GEN]] ], // Genetic
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_MER]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ALC]], [skillTree_TRANS, JobExclusiveSkillOBJ[cls_BIO]], [skillTree_THIRDJOB, JobExclusiveSkillOBJ[cls_GEN]] ], // Genetic Trans
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_NIN]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_KAGOB]] ], // Kagerou/Oboro
+	[ [skillTree_FIRSTJOB, JobExclusiveSkillOBJ[cls_SNOVI]], [skillTree_SECONDJOB, JobExclusiveSkillOBJ[cls_ENOVI]] ] // Super Novice
     ];
 }
 

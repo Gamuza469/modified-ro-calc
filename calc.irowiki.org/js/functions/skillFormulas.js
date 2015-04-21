@@ -2632,7 +2632,7 @@ function CalcSkillDamage()
 		if(n_B[en_BOSS] == 0)
 		{
 
-			w_SkillMod += (400 + 50 * n_A_ActiveSkillLV + 20 * eval(document.calcForm.SkillSubNum.value)) /100;
+			w_SkillMod += (500 + 50 * n_A_ActiveSkillLV + 20 * eval(document.calcForm.SkillSubNum.value)) /100;
 			CalcAtkMods02(w_SkillMod,0);
 
 
@@ -2675,15 +2675,15 @@ function CalcSkillDamage()
 		// (((ATK*SkillLv)*((100-Enemy DEF)/100) - Enemy VIT) (Elemental Modifier)
 		// This formula is whack for renewal...Just gonna do skillLvl * atk for now
 		myInnerHtml( "CRIATKname", "Physical damage portion", 0 );
-		w_SkillMod = n_A_ActiveSkillLV;
+		w_SkillMod = 1;
 		//CalcAtkMods02( w_SkillMod, 0 );
 		if ( SkillSearch( skill_AX_ENCHANT_DEADLY_POISON ) )
 		{ // half with edp on
-			w_SkillMod /= 2.0;
+			w_SkillMod = 0.5;
 		}
 		for ( var i = 0; i < 3; i++ )
 		{
-			physicalDamage[i] = ApplyEnemyDefense( n_A_DMG[i] * w_SkillMod, i, 0 );
+			physicalDamage[i] = ApplyEnemyDefense( n_A_DMG[i] * (((300 + (50 * n_A_ActiveSkillLV)) * w_SkillMod)/100), i, 0 );
 		}
 		myInnerHtml( "CRIATK", physicalDamage[0] + "-" + physicalDamage[2], 0 );
 		
@@ -2694,7 +2694,7 @@ function CalcSkillDamage()
 		// Calc Raw Damage
 		for ( var i = 0; i < 3; i++ )
 		{
-			magicDamage[i] = n_A_INT * 5 * n_A_ActiveSkillLV;
+			magicDamage[i] = n_A_MATK[i] * ((300 + (50 * n_A_ActiveSkillLV))/100);
 			magicDamage[i] += baseRandomMagicDamage + i * baseRandomMagicDamage;
 		}
 		myInnerHtml( "CRInum", magicDamage[0] + "-" + magicDamage[2], 0 );
@@ -3054,7 +3054,7 @@ function CalcSkillDamage()
 			  n_A_ActiveSkill === skill_NIN_KILLING_STRIKE_MAX )
 	{
 		// user input
-		var remainingHP = parseInt(formElements["SkillSubNum"].value);
+		var remainingHP = 0;
 		var numMirrors = parseInt(formElements["SkillSubNum2"].value);
 		
 		n_PerHIT_DMG = 0;
@@ -3064,24 +3064,28 @@ function CalcSkillDamage()
 		//CalcAtkMods02( w_SkillMod, 0 );
 		if ( n_A_ActiveSkill === skill_NIN_KILLING_STRIKE_MAX )
 		{
-			remainingHP = n_A_MaxHP -1;
+			remainingHP = n_A_MaxHP - 1;
+		} else {
+		    remainingHP = parseInt(formElements["SkillSubNum"].value);
 		}
 		w = ( n_A_Weapon_ATK + weaponUpgradeAttack + equipmentAttack + overrefineAttack + strengthBonusAttack ) * (100 - monsterBuffs[status_en_buff_Elemental]) / 100;
 		
 		//w_DMG[0] = (statusAttack + w + n_A_ActiveSkillLV) * 40 + remainingHP * (n_A_BaseLV / 100) * n_A_ActiveSkillLV / 10;
-		w_DMG[0] = ((statusAttack + w) * 17 + remainingHP) * n_A_ActiveSkillLV * 0.1 / 7;
+		//w_DMG[0] = ((statusAttack + w) * 17 + remainingHP) * n_A_ActiveSkillLV * 0.1 / 7;
+		w_DMG[0] = ((statusAttack + w) * 40) + (remainingHP * ((8 * n_A_ActiveSkillLV) / 100));
 		// Mirror Image Modifier
 		w_DMG[0] = ApplyEnemyDefense(w_DMG[0],0,0);
-		w_DMG[0] *= 1 + (numMirrors + 1) * 0.20;
+		w_DMG[0] *= 1 + (numMirrors * 25 / 100);
 		w_DMG[0] = Math.floor(w_DMG[0] * element[n_B[en_ELEMENT]][ele_NEUTRAL]/100);
 		w_DMG[0] *= ( 100 - monsterBuffs[status_en_buff_Race] ) / 100;
 		w_DMG[0] *= ( rangedMod + 100 ) / 100;
+		w_DMG[0] *= weaponSizeMod;
 		
 		w_DMG[2] = w_DMG[1] = w_DMG[0];
 		for ( var i = 0; i < 3; i++ )
 		{
-			Last_DMG_A[i] = Math.floor(w_DMG[i] * 7);
-			Last_DMG_B[i] = Math.floor(w_DMG[i]);
+			Last_DMG_A[i] = Math.floor(w_DMG[i]);
+			Last_DMG_B[i] = Math.floor(w_DMG[i] / 7);
 			InnStr[i] += Last_DMG_A[i] + " (" + Last_DMG_B[i] + SubName[8][Language] + "7hit)";
 		}
 		w_HIT_HYOUJI = 100;
@@ -3262,7 +3266,7 @@ function CalcSkillDamage()
 		n_A_Weapon_element = ele_HOLY;
 		damageType = kDmgTypeMagic;
 		w_DMG[2] = CalcHeal( n_A_ActiveSkillLV, 0, 0 );
-		w_DMG[2] = Math.floor( Math.floor( w_DMG[2] / 2) * element[n_B[en_ELEMENT]][ele_DARK] / 100 );
+		w_DMG[2] = Math.floor( Math.floor( w_DMG[2] / 2) * element[n_B[en_ELEMENT]][ele_HOLY] / 100 );
 		if ( n_B[en_ELEMENT] < 90 )
 		{
 			w_DMG[2] = 0;

@@ -239,6 +239,15 @@ input.noborder{
 select{
 	width:140px;
 }
+select.encClass {
+    width: 90px;
+}
+select.encType {
+    width: 95px;
+}
+select.encValue {
+    width: 60px;
+}
 
 .tabBar{
 }

@@ -1749,6 +1749,7 @@ var ksAloe = 12;
 var ksResistantSouls = 13;
 var ksStriking = 14;
 var ksOdinsPower = 15;
+var ksStrikingEndowBonus = 16;
 // elemental field level values
 var ksVolcano = 0;
 var ksDeluge = 1;

@@ -10,6 +10,10 @@ body{
 	margin:0px auto;
 }
 
+#saveList {
+    width: 230px;
+}
+
 div.pageBody{
 	padding:4px;
 	background-color:#389DCC;

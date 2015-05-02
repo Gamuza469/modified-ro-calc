@@ -1045,9 +1045,9 @@ function ClickWeaponType( weaponType )
 			//var htmlStr = "Left Hand: ";
 			var htmlStr = '<select id="A_Weapon2Type"  style="width:200px;" onchange="ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc()">';
 			if (n_A_JOB == cls_KAGOB)
-				htmlStr += '<option value="0">Fist or Shield<option value="1">Dagger</select>';
+				htmlStr += '<option value="0">Fist or Shield</option><option value="1">Dagger</option></select>';
 			else
-				htmlStr += '<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>';
+				htmlStr += '<option value="0">Fist or Shield</option><option value="1">Dagger</option><option value="6">One-handed Axe</option><option value="2">One-handed Sword</option></select>';
 			myInnerHtml( "A_SobWeaponName", htmlStr, 0 );
 			
 			// show the off hand table

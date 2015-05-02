@@ -764,15 +764,27 @@ function AdjustWeaponTypeList( job )
 		weaponTypeSelect.options[i] = null;
 	}
 	
-	var optionIndex = 0;
+	var weaponTypeArray = new Array();
+	
 	for ( var i = 0; i <= 21; i++ )
 	{
 		if ( JobASPD[job][i] != 0 )
 		{
-			weaponTypeSelect.options[optionIndex] = new Option( WeaponName[i][Language], i );
-			optionIndex++;
+		    if (i > 0) {
+			weaponTypeArray.push([WeaponName[i][Language], i]);
+		    }
+		    
 		}
 	}
+	
+	weaponTypeArray.sort();	
+	weaponTypeArray.unshift([WeaponName[0][Language], 0]);
+	
+	for (var i = 0; i < weaponTypeArray.length; i++) {
+	    weaponTypeSelect.options[i] = new Option(weaponTypeArray[i][0], weaponTypeArray[i][1]);
+	}
+	
+	weaponTypeArray;
 }
 
 function AdjustActiveSkillList( job )
@@ -1580,13 +1592,13 @@ with(document.calcForm)
 	str += '<td id="EN613_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN614_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN614_2" class="bgLtRow1 padded optArea"></td>';
-	/*str += '</tr><tr>';
+	str += '</tr><tr>';
 	str += '<td id="EN615_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN615_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN616_1" class="bgLtRow3 padded optCaption"></td>';
 	str += '<td id="EN616_2" class="bgLtRow1 padded optArea"></td>';
 	str += '<td id="EN617_1" class="bgLtRow3 padded optCaption"></td>';
-	str += '<td id="EN617_2" class="bgLtRow1 padded optArea"></td>';*/
+	str += '<td id="EN617_2" class="bgLtRow1 padded optArea"></td>';
 	str += '</tr></table>';
 	myInnerHtml("OtherBuffs",str,0);
 
@@ -1658,9 +1670,18 @@ with(document.calcForm)
 	myInnerHtml( "EN613_1", SKILL_NAME[681][Language], 0 );
 	myInnerHtml( "EN613_2", '<select name="striking" style="width:50px;" onchange="ToggleOtherBuffs()"></select>', 0 );
 	
+	// Striking Endow Bonus
+	
+	myInnerHtml( "EN614_1", "Striking Endow Bonus", 0 );
+	myInnerHtml( "EN614_2", '<select name="strikingEndow" style="width:50px;" onchange="ToggleOtherBuffs()"></select>', 0 );
+	
+	for (var i = 0; i < 21; i++) {
+	    strikingEndow.options[i] = new Option (i.toString(), i);
+	}
+	
 	// Odin's Power
-	myInnerHtml( "EN614_1", SKILL_NAME[721][Language], 0 );
-	myInnerHtml( "EN614_2", '<select name="odinsPower" style="width:50px;" onchange="ToggleOtherBuffs()"></select>', 0 );
+	myInnerHtml( "EN615_1", SKILL_NAME[721][Language], 0 );
+	myInnerHtml( "EN615_2", '<select name="odinsPower" style="width:50px;" onchange="ToggleOtherBuffs()"></select>', 0 );
 	
 	// Frigg's Song
 	//myInnerHtml( "EN615_1", SKILL_NAME[741][Language], 0 );
@@ -1909,7 +1930,7 @@ with(document.calcForm)
 	expTap.options[0] = new Option("None",0);
 	for ( var i = 1; i <= 20; i++ )
 	{
-		expTap.options[i] = new Option("+"+ (i*25) +"%",i);
+		expTap.options[i] = new Option("+"+ (i*5) +"%",i);
 	}
 	
 	// special environment

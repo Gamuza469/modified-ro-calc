@@ -329,7 +329,8 @@ with ( document.calcForm )
 		otherBuffs[ksMagnumBreak] = formElements["magnumBreak"].checked;
 		otherBuffs[ksAloe] = formElements["aloe"].checked;
 		otherBuffs[ksResistantSouls] = parseInt(formElements["resistantSouls"].value);
-		//otherBuffs[ksStriking] = parseInt(formElements["striking"].value);
+		otherBuffs[ksStriking] = parseInt(formElements["striking"].value);
+		otherBuffs[ksStrikingEndowBonus] = parseInt(formElements["strikingEndow"].value);
 		otherBuffs[ksOdinsPower] = parseInt(formElements["odinsPower"].value);
 		//otherBuffs[ksFriggsSong] = parseInt(formElements["friggsSong"].value);
 	}
@@ -1635,7 +1636,10 @@ function FirstNovis()
 //   0 = all
 //   1 = all axc novi
 //  50 = novis
-//  51~54 = Swo~Arc Cls
+//  51 = Swo Cls
+//  52 = Thi Cls
+//  53 = Aco Cls
+//  54 = Arc Cls
 //  55 = Mag Cls & SL
 //  56 = Mer Cls
 //  58 = Nin
@@ -1655,7 +1659,7 @@ function FirstNovis()
 //  79 = 2nd Cls
 //  80 = Thi & Rog Cls & Hunter Cls
 //  81 = Ass & Prie Cls
-//  82 = 2n trans Cls
+//  82 = 2nd trans Cls
 //  83 = Swo & Thi & Arc & Merc Cls & TKK & TKM & GS
 //  84 = Swo & Thi & Merc Cls & TKK & TKM
 //  85 = Swo & Thi & Aco & Merc Cls & TKK & TKM

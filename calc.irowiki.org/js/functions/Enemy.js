@@ -514,13 +514,13 @@ with( document.calcForm )
 		}
 		if(battleEffects[pass_VIII_PAR_COUNT])
 		{
-			n_B[en_BASEEXP] = Math.floor(n_B[en_BASEEXP] / (1 + battleEffects[pass_VIII_PAR_COUNT]) + 1); // bExp
-			n_B[en_JOBEXP] = Math.floor(n_B[en_JOBEXP] / (1 + battleEffects[pass_VIII_PAR_COUNT]) + 1);
+			n_B[en_BASEEXP] = Math.floor(n_B[en_BASEEXP] * (1 + (20 * battleEffects[pass_VIII_PAR_COUNT] / 100)) / (1 + battleEffects[pass_VIII_PAR_COUNT]) + 1); // bExp
+			n_B[en_JOBEXP] = Math.floor(n_B[en_JOBEXP] * (1 + (20 * battleEffects[pass_VIII_PAR_COUNT] / 100)) / (1 + battleEffects[pass_VIII_PAR_COUNT]) + 1);
 		}
 		if(battleEffects[pass_VIII_EXP_TAB])
 		{
-			n_B[en_BASEEXP] = Math.floor(n_B[en_BASEEXP] * (100 + 25 * battleEffects[pass_VIII_EXP_TAB])/100); // bExp
-			n_B[en_JOBEXP] = Math.floor(n_B[en_JOBEXP] * (100 + 25 * battleEffects[pass_VIII_EXP_TAB])/100);
+			n_B[en_BASEEXP] = Math.floor(n_B[en_BASEEXP] * (100 + 5 * battleEffects[pass_VIII_EXP_TAB])/100); // bExp
+			n_B[en_JOBEXP] = Math.floor(n_B[en_JOBEXP] * (100 + 5 * battleEffects[pass_VIII_EXP_TAB])/100);
 		}
 		if(SkillSearch(367))
 		{

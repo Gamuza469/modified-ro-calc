@@ -162,8 +162,11 @@ function CalcAtk()
 	statusAttack = CalcStatAtk();
 	n_A_WeaponLV = ItemOBJ[n_A_Equip[eq_WEAPON]][itm_WLVL];
 	n_A_Weapon_ATK = ItemOBJ[n_A_Equip[eq_WEAPON]][itm_ATK];
-	if (otherBuffs[ksStriking] >= 1) {
-		n_A_Weapon_ATK += 100+(otherBuffs[ksStriking]*2+8)*n_A_WeaponLV;
+	if (otherBuffs[ksStriking] >= 1 && n_A_Equip[eq_WEAPON] !== 0) {
+		n_A_Weapon_ATK += (8 + (otherBuffs[ksStriking] * 2)) * n_A_WeaponLV;
+	}
+	if (otherBuffs[ksStrikingEndowBonus] >= 1) {
+	    n_A_Weapon_ATK += 5 * otherBuffs[ksStrikingEndowBonus];
 	}
 	if (otherBuffs[ksOdinsPower] >= 1) { // Odin's Power
 		n_A_Weapon_ATK += 70+30*(otherBuffs[ksOdinsPower] - 1);
@@ -1912,22 +1915,6 @@ function calcSP( n_A_MaxSP )
 		if (n_A_BODY_DEF_PLUS >= 9) { w += 100; }
 	}
 	
-	// Items
-	if ( usableItems[ksIncreaseSP] > 0 )
-	{
-		var modifier = 0;
-		
-		if ( usableItems[ksIncreaseSP] === 1 )
-		{
-			modifier = -5;
-		}
-		else if ( usableItems[ksIncreaseSP] === 3 )
-		{
-			modifier = 5;
-		}
-		w += ( n_A_BaseLV / 10 ) + modifier;
-	}
-	
 	// Skills	
 	if ( SkillSearch( skill_SL_KAINA ) )
 	{
@@ -2016,6 +2003,21 @@ function calcSP( n_A_MaxSP )
 	{
 		spMultiplier += 5;
 	}
+	if ( usableItems[ksIncreaseSP] > 0 )
+	{
+		var modifier = 0;
+		
+		if ( usableItems[ksIncreaseSP] === 1 )
+		{
+			modifier = -5;
+		}
+		else if ( usableItems[ksIncreaseSP] === 3 )
+		{
+			modifier = 5;
+		}
+		spMultiplier += ( n_A_BaseLV / 10 ) + modifier;
+	}
+	
 
 	n_A_MaxSP = Math.floor( n_A_MaxSP * ( 100 + spMultiplier ) / 100 );
 	
@@ -2850,6 +2852,9 @@ function calcCrit( n_A_CRI )
 		 performerBuffs[ksNumPerformers] >= 2 )
 	{ // Warcry from Beyond
 		n_A_CRI += performerBuffs[ksChorusLevel] * performerBuffs[ksNumPerformers];
+	}
+	if (otherBuffs[ksStriking] >= 1 && n_A_Equip[eq_WEAPON] !== 0) {
+		n_A_CRI += otherBuffs[ksStriking];
 	}
 	
 	if ( miscEffects[ksNoCrit])

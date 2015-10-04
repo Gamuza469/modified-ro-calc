@@ -2178,17 +2178,17 @@ function EnemySort()
 	if(wES==21||wES==22)
 	{ // PerfHit/ Dodge
 		for(i=0;i<=EnemyNum;i++)
-			ESwork2[i] = MonsterOBJ[i][wES] +") ";
+			ESwork2[i] = MonsterOBJ[i][wES] +" << ";
 	}
 	else if(wES==2)
 	{ // Race
 		for(i=0;i<=EnemyNum;i++)
-			ESwork2[i] = SyuzokuOBJ[MonsterOBJ[i][en_RACE]][Language] +") ";
+			ESwork2[i] = SyuzokuOBJ[MonsterOBJ[i][en_RACE]][Language] +" << ";
 	}
 	else if(wES==3)
 	{ // Element
 		for(i=0;i<=EnemyNum;i++)
-			ESwork2[i] = ZokuseiOBJ[Math.floor(MonsterOBJ[i][en_ELEMENT] /10)][Language] + MonsterOBJ[i][en_ELEMENT] % 10 +") ";
+			ESwork2[i] = ZokuseiOBJ[Math.floor(MonsterOBJ[i][en_ELEMENT] /10)][Language] + MonsterOBJ[i][en_ELEMENT] % 10 +" << ";
 	}
 	else
 	{ // rest ?
@@ -2501,6 +2501,7 @@ function Init()
 	document.calcForm.E_BOOST_ATK_PERC.value = 0;
 	document.calcForm.E_BOOST_MATK.value = 0;
 	document.calcForm.E_BOOST_MATK_PERC.value = 0;
+	document.calcForm.E_BOOST_HIT.value = 0;
 	document.calcForm.E_BOOST_FLEE.value = 0;
 	document.calcForm.E_BOOST_DODGE.value = 0;
 	document.calcForm.E_BOOST_HP.value = 0;

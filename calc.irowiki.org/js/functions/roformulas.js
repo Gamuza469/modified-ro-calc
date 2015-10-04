@@ -2610,7 +2610,7 @@ function calcFlee( n_A_FLEE )
 		n_A_FLEE += otherBuffs[ksElementFieldLvl] *3;
 	if(battleChantBuffs[pass_V_HIT_FLEE])
 		n_A_FLEE += 50;
-		
+	
 	// Items
 	if ( usableItems[ksHoneyPastry] )
 	{

@@ -96,88 +96,107 @@
 	            <table class="bgLtTable aligned">
 	            	<tbody><tr>
 	            		<td class="bgLtRow3 padded optCaption">
-					05/02/2015:
+					05/xx/2015:
 					    <ul style="margin-left: 5px;">
-						<li>Fixed SP Increase Potion adding absolute amount (thanks Pred).</li>
-						<li>Ordered weapon type list.</li>
-						<li>Fixed EXP sharing in party and EXP tap bonus.</li>
-						<li>Implemented Striking ATK/CRIT bonuses.</li>
+						<li>Implemented HIT as an Additional Enchant option.</li>
+						<li>Fixed broken Pet bonuses.</li>
+						<li>Minor UI changes.</li>
 					    </ul>
 					    - Gamuza<br/>
-					04/21/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150421').toggle()">
-					<span style="display: none;" id="note20150421">
-					    <ul style="margin-left: 5px;">
-						<li>Fixed a bug in offensive Heal formula.</li>
-						<li>Fixed Killing Stroke formula.</li>
-						<li>Fixed Venom Splasher formula.</li>
-						<li>Fixed Soul Destroyer formula. Now based on MATK (will need your feedback on this). Thanks Ayin.</li>
-					    </ul>
-					    - Gamuza<br/>
-					</span><br/>
-					02/08/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150208').toggle()">
-					<span style="display: none;" id="note20150208">
-					    <ul style="margin-left: 5px;">
-						<li>Dark Claw debuff now only applies on non-Boss monsters.</li>
-						<li>Fixed the speed issue with the Experience Calculator.</li>
-						<li>Re-implemented current EXP/jEXP inputs to the Experience Calculator.</li>
-						<li>Re-ordered and sorted active (battle) skill lists.</li>
-						<li>Changed internally the way some of the cards are identified.</li>
-						<li>Re-ordered the Pet list.</li>
-						<li>Re-ordered the Temporary Effect list.</li>
-					    </ul>
-					    - Gamuza<br/>
-					</span><br/>
-					01/30/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150130').toggle()">
-					<span style="display: none;" id="note20150130">
-					    <ul style="margin-left: 5px;">
-						<li>Updated the HP/SP tables for 3rd Jobs up to Lv.175 and Kagerou/Oboro up to Lv.160 with current iRO values.</li>
-						<li>Implemented new 3rd Job skills.</li>
-						<ul>
-						    <li>Attack Skills: Dark Claw, Dragon Water Breath, Hallucination Drug, Lava Flow. Flash Combo not implemented yet.</li>
-						    <li>Self Buff Skills: Intense Telekinesis, No Limits, Offertorium, Full Throttle.</li>
-						    <li>Maestro/Wanderer Solo: Frigg's Song.</li>
-						    <li>Monster Debuffs: Dark Claw.</li>
-						    <li>Not Applicable: Elemental Shield, King's Grace.</li>
-						</ul>
-						<li>Updated the base/job experience tables. Also fixed the Experience calculator. Sometimes it's very slow, though.</li>
-						<li>Extended Info now updates when changing base levels.</li>
-						<li>Reestructured the job list.</li>
-						<li>Fixed an annoying CSS/design bug in Firefox.</li>
-						<li>Fixed Gravitational Field formula and Odin's Power DEF/MDEF reduction.</li>
-						<li>Fixed some monster exclusive skills and added more skills to the list.</li>
-					    </ul>
-					    - Gamuza<br/>
-					</span><br/>
-					01/24/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note2').toggle()">
-					<span style="display: none;" id="note2">
-					    <ul style="margin-left: 5px;">
-						<li>Tweaked 3rd jobs HP values some more. They should be accurate up to Lv.150.</li>
-						<li>Same goes for SP values. However, these should be accurate up to Lv.175.</li>
-						<li>Fixed SP values for Kagerou/Oboro.</li>
-						<li>The 'Adopted' checkbox will only be available on jobs which allow adoption.</li>
-						<li>Fixed some newly introduced UI bugs.</li>
-						<li>Placeholders for new 3rd Job skills. They do nothing at the moment.</li>
-					    </ul>
-					    - Gamuza<br/>
-					</span><br/>
-                                        01/17/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note1').toggle()">
-					<span style="display: none;" id="note1"><br/>
-					    Various fixes:
-					    <ul style="margin-left: 5px">
-						<li>Maximum base level cap raised to 175 for 3rd Jobs.</li>
-						<li>Maximum stat limit raised to 130 for 3rd Jobs.</li>
-						<li>Added job bonuses up to Job Lv.60 for 3rd Jobs.</li>
-						<li>Tweaked HP values of all jobs and modified Kagerou/Oboro, Rune Knight, Warlock, Mechanic and Sorcerer values. They should be more accurate now.</li>
-						<li>Fixed bonus HP for Super Novices at Base Lv.99. Now it's not affected by VIT.</li>
-						<li><span style="text-decoration: line-through;">Fixed Mental Strength damage reduction.</span> Fixed Assumptio defense increase. It was also doubling Soft DEF/MDEF.</li>
-					    </ul>
-					    - Gamuza<br/>
-					</span>
 		            	</td>
 		            </tr>
 	            </tbody></table>
 	            </div>
-                
+			
+			<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('oldnews')">Old News</div>
+	        	<div id="oldnews" style="display:none">
+			    <table class="bgLtTable aligned">
+				<tbody><tr>
+					<td class="bgLtRow3 padded optCaption">
+						05/02/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150502').toggle()">
+						<span style="display: none;" id="note20150502">
+						    <ul style="margin-left: 5px;">
+							<li>Fixed SP Increase Potion adding absolute amount (thanks Pred).</li>
+							<li>Ordered weapon type list.</li>
+							<li>Fixed EXP sharing in party and EXP tap bonus.</li>
+							<li>Implemented Striking ATK/CRIT bonuses.</li>
+						    </ul>
+						    - Gamuza<br/>
+						</span><br/>
+						04/21/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150421').toggle()">
+						<span style="display: none;" id="note20150421">
+						    <ul style="margin-left: 5px;">
+							<li>Fixed a bug in offensive Heal formula.</li>
+							<li>Fixed Killing Stroke formula.</li>
+							<li>Fixed Venom Splasher formula.</li>
+							<li>Fixed Soul Destroyer formula. Now based on MATK (will need your feedback on this). Thanks Ayin.</li>
+						    </ul>
+						    - Gamuza<br/>
+						</span><br/>
+						02/08/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150208').toggle()">
+						<span style="display: none;" id="note20150208">
+						    <ul style="margin-left: 5px;">
+							<li>Dark Claw debuff now only applies on non-Boss monsters.</li>
+							<li>Fixed the speed issue with the Experience Calculator.</li>
+							<li>Re-implemented current EXP/jEXP inputs to the Experience Calculator.</li>
+							<li>Re-ordered and sorted active (battle) skill lists.</li>
+							<li>Changed internally the way some of the cards are identified.</li>
+							<li>Re-ordered the Pet list.</li>
+							<li>Re-ordered the Temporary Effect list.</li>
+						    </ul>
+						    - Gamuza<br/>
+						</span><br/>
+						01/30/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note20150130').toggle()">
+						<span style="display: none;" id="note20150130">
+						    <ul style="margin-left: 5px;">
+							<li>Updated the HP/SP tables for 3rd Jobs up to Lv.175 and Kagerou/Oboro up to Lv.160 with current iRO values.</li>
+							<li>Implemented new 3rd Job skills.</li>
+							<ul>
+							    <li>Attack Skills: Dark Claw, Dragon Water Breath, Hallucination Drug, Lava Flow. Flash Combo not implemented yet.</li>
+							    <li>Self Buff Skills: Intense Telekinesis, No Limits, Offertorium, Full Throttle.</li>
+							    <li>Maestro/Wanderer Solo: Frigg's Song.</li>
+							    <li>Monster Debuffs: Dark Claw.</li>
+							    <li>Not Applicable: Elemental Shield, King's Grace.</li>
+							</ul>
+							<li>Updated the base/job experience tables. Also fixed the Experience calculator. Sometimes it's very slow, though.</li>
+							<li>Extended Info now updates when changing base levels.</li>
+							<li>Reestructured the job list.</li>
+							<li>Fixed an annoying CSS/design bug in Firefox.</li>
+							<li>Fixed Gravitational Field formula and Odin's Power DEF/MDEF reduction.</li>
+							<li>Fixed some monster exclusive skills and added more skills to the list.</li>
+						    </ul>
+						    - Gamuza<br/>
+						</span><br/>
+						01/24/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note2').toggle()">
+						<span style="display: none;" id="note2">
+						    <ul style="margin-left: 5px;">
+							<li>Tweaked 3rd jobs HP values some more. They should be accurate up to Lv.150.</li>
+							<li>Same goes for SP values. However, these should be accurate up to Lv.175.</li>
+							<li>Fixed SP values for Kagerou/Oboro.</li>
+							<li>The 'Adopted' checkbox will only be available on jobs which allow adoption.</li>
+							<li>Fixed some newly introduced UI bugs.</li>
+							<li>Placeholders for new 3rd Job skills. They do nothing at the moment.</li>
+						    </ul>
+						    - Gamuza<br/>
+						</span><br/>
+						01/17/2015:<input type="button" value="Show/Hide" onclick="javascript:$('#note1').toggle()">
+						<span style="display: none;" id="note1"><br/>
+						    Various fixes:
+						    <ul style="margin-left: 5px">
+							<li>Maximum base level cap raised to 175 for 3rd Jobs.</li>
+							<li>Maximum stat limit raised to 130 for 3rd Jobs.</li>
+							<li>Added job bonuses up to Job Lv.60 for 3rd Jobs.</li>
+							<li>Tweaked HP values of all jobs and modified Kagerou/Oboro, Rune Knight, Warlock, Mechanic and Sorcerer values. They should be more accurate now.</li>
+							<li>Fixed bonus HP for Super Novices at Base Lv.99. Now it's not affected by VIT.</li>
+							<li><span style="text-decoration: line-through;">Fixed Mental Strength damage reduction.</span> Fixed Assumptio defense increase. It was also doubling Soft DEF/MDEF.</li>
+						    </ul>
+						    - Gamuza<br/>
+						</span>
+					</td>
+				    </tr>
+			    </tbody>
+			    </table>
+			</div>
 	        	<!-- save area -->
 	        	<div class="bgMdTitle mdTitle" onclick="ToggleVisibility('savearea')">Save</div>
                 <div id="savearea" style="display:block">
@@ -748,6 +767,8 @@
 								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MATK_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 							    </tr>
 							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="13%">HIT</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HIT" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow4 padded optCaption" width="13%">FLEE</td>
 								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_FLEE" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow4 padded optCaption" width="13%">P. DODGE</td>
@@ -756,10 +777,10 @@
 								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HP" max="5000" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow4 padded optCaption" width="13%">MAX SP</td>
 								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_SP" max="200" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-								<td class="bgLtRow4 padded optCaption" width="13%">MAX HP %</td>
-								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HP_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 							    </tr>
 							    <tr>
+								<td class="bgLtRow4 padded optCaption" width="13%">MAX HP %</td>
+								<td class="bgLtRow3 padded optArea" width="7%"><input value="0" id="E_BOOST_HP_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow3 padded optCaption" width="13%">MAX SP %</td>
 								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_SP_PERC" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow3 padded optCaption" width="13%">Ranged Damage %</td>
@@ -768,10 +789,10 @@
 								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_DEF" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow3 padded optCaption" width="13%">MDEF</td>
 								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_MDEF" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-								<td class="bgLtRow3 padded optCaption" width="13%">CRIT</td>
-								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_CRIT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 							    </tr>
 							    <tr>
+								<td class="bgLtRow3 padded optCaption" width="13%">CRIT</td>
+								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_CRIT" max="50" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow3 padded optCaption" width="13%">Damage Reduction %</td>
 								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_RED_PERC" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow3 padded optCaption" width="13%">ASPD</td>
@@ -780,8 +801,6 @@
 								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_ASPD_PERC" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
 								<td class="bgLtRow3 padded optCaption" width="13%">Cast Time %</td>
 								<td class="bgLtRow4 padded optArea" width="7%"><input value="0" id="E_BOOST_CASTING" max="100" min="0" onchange="StAllCalc()" size="4" type="number"></td>
-								<td class="bgLtRow3 padded optCaption" width="13%"></td>
-								<td class="bgLtRow4 padded optArea" width="7%"></td>
 							    </tr>
 							 </tbody>
 						    </table>
@@ -1449,7 +1468,7 @@
 	                        	Original simulator created by
 	                        	<a href="http://roratorio.2-d.jp/ro/">ROratorio</a>. Later updated by <a href="http://calcxre.wushuang.ws/">Nretep. Updated also by </a><a href="http://forums.irowiki.org/member.php?u=21358">ProGM</a> &amp; Roger<br>
 	                        	Currently updated by Gamuza, Kaddy &amp; iROWiki.org</td>
-	                        <td class="right">Current Version 2.1.5<br>
+	                        <td class="right">Current Version 2.1.5<br />
 	                        Hosted by iROWiki.org</td>
 	                    </tr>
 	                </tbody></table>

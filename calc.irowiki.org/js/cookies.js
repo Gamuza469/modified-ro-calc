@@ -1450,6 +1450,7 @@ function URLOUT()
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_ATK_PERC.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_MATK.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_MATK_PERC.value), 1 );
+	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_HIT.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_FLEE.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_DODGE.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_HP.value), 1 );
@@ -1756,6 +1757,7 @@ with( document.calcForm )
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_ATK_PERC.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_MATK.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_MATK_PERC.value = StoN2(w.substr(81+(index++),1));
+		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_HIT.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_FLEE.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_DODGE.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_HP.value = StoN2(w.substr(81+(index++),1));
@@ -2311,6 +2313,7 @@ function TempSaveActual()
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_ATK_PERC.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_MATK.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_MATK_PERC.value), 1 );
+	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_HIT.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_FLEE.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_DODGE.value), 1 );
 	SaveData[index++] = NtoS2( parseInt(document.calcForm.E_BOOST_HP.value), 1 );
@@ -2472,6 +2475,7 @@ with( document.calcForm )
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_ATK_PERC.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_MATK.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_MATK_PERC.value = StoN2(w.substr(81+(index++),1));
+		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_HIT.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_FLEE.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_DODGE.value = StoN2(w.substr(81+(index++),1));
 		if (!(StoN2(w.substr(81+(index),1))===undefined)) document.calcForm.E_BOOST_HP.value = StoN2(w.substr(81+(index++),1));

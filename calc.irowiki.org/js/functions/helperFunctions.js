@@ -93,6 +93,7 @@ function calcSpecialTok() {
 	if (!isNaN(parseInt(document.calcForm.E_BOOST_ATK_PERC.value))) n_tok[bon_PHY_ATK] += parseInt(document.calcForm.E_BOOST_ATK_PERC.value);
 	if (!isNaN(parseInt(document.calcForm.E_BOOST_MATK.value))) n_tok[bon_MATK] += parseInt(document.calcForm.E_BOOST_MATK.value);
 	if (!isNaN(parseInt(document.calcForm.E_BOOST_MATK_PERC.value))) n_tok[bon_MATK_MUL] += parseInt(document.calcForm.E_BOOST_MATK_PERC.value);
+	if (!isNaN(parseInt(document.calcForm.E_BOOST_HIT.value))) n_tok[bon_HIT] += parseInt(document.calcForm.E_BOOST_HIT.value);
 	if (!isNaN(parseInt(document.calcForm.E_BOOST_FLEE.value))) n_tok[bon_FLEE] += parseInt(document.calcForm.E_BOOST_FLEE.value);
 	if (!isNaN(parseInt(document.calcForm.E_BOOST_DODGE.value))) n_tok[bon_PDODGE] += parseInt(document.calcForm.E_BOOST_DODGE.value);
 	if (!isNaN(parseInt(document.calcForm.E_BOOST_HP.value))) n_tok[bon_HP_ADD] += parseInt(document.calcForm.E_BOOST_HP.value);
@@ -923,6 +924,7 @@ function BuildPassiveSkillTable()
 	var skillDSelect = formElements["A_Skill9"];
 	var skillESelect = formElements["A_Skill11"];
 	var skillFSelect = formElements["A_Skill6"];
+	var skillGSelect = formElements["A_Skill7"];
 	
 	// Energy Coat
 	if ( JobSkillPassOBJ[job][0] === skill_MA_ENERGY_COAT )
@@ -1020,6 +1022,34 @@ function BuildPassiveSkillTable()
 		}
 		// adjust the width
 		skillESelect.style.width = 85+'px';
+	}
+	
+	if (JobSkillPassOBJ[job][7] === skill_SOR_SPIRIT_CONTROL) {
+		for ( var i = 3; i >= 0; i-- )
+		{
+			skillGSelect.options[i] = null;
+		}
+		var w_name=["0 (Idle)","1 (Passive)","2 (Defense)","3 (Offense)"];
+		for ( var i = 0; i <= 3; i++ )
+		{
+			skillGSelect.options[i] = new Option(w_name[i],i);
+		}
+		// adjust the width
+		skillGSelect.style.width = 95+'px';
+	}
+	
+	if (JobSkillPassOBJ[job][8] === skill_SOR_SPIRIT_CONTROL) {
+		for ( var i = 3; i >= 0; i-- )
+		{
+			skillCSelect.options[i] = null;
+		}
+		var w_name=["0 (Idle)","1 (Passive)","2 (Defense)","3 (Offense)"];
+		for ( var i = 0; i <= 3; i++ )
+		{
+			skillCSelect.options[i] = new Option(w_name[i],i);
+		}
+		// adjust the width
+		skillCSelect.style.width = 95+'px';
 	}
 	
 	if ( JobSkillPassOBJ[job][8] === skill_SOR_SUMMON_TYPE )

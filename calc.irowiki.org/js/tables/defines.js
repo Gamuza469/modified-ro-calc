@@ -663,6 +663,20 @@ kunTyp_FELL_POISON = 4;
 kunTyp_POISON = 4;
 }
 
+{ // Sorcerer Summon Type
+    summonType_AGNI = 0;
+    summonType_VENTUS = 1;
+    summonType_AQUA = 2;
+    summonType_TERRA = 3;
+}
+
+{ // Sorcerer Summon Stances
+    summonStance_NOSPIRIT = 0;
+    summonStance_IDLE = 1;
+    summonStance_DEFENSE = 2;
+    summonStance_OFFENSE = 3;
+}
+
 { // Statuses - ? - monsterDebuffs[%]
 // = ?
 status_POISON = 0;
